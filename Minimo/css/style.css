@@ -1,5 +1,10 @@
 /*font-family: 'Ubuntu', sans-serif;
 font-family: 'Playfair Display', serif;*/
+html{
+	width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
 *{
 	padding: 0;
 	margin: 0;
@@ -9,6 +14,8 @@ font-family: 'Playfair Display', serif;*/
 .gray_link{
 	color: #626262;
 	text-decoration: none;
+	border-bottom: 2px solid transparent;
+	transition: all ease .30s;
 }
 .gray_link:hover{
 	border-bottom: 2px solid black;
@@ -73,6 +80,7 @@ font-family: 'Playfair Display', serif;*/
 	text-transform: uppercase;
 	font-size: 14px;
 	font-family: 'Ubuntu', sans-serif;
+	transition: all ease .15s;
 }
 .article_section_link__item:hover{
 	border-bottom: 2px solid black;
@@ -102,6 +110,7 @@ font-family: 'Playfair Display', serif;*/
 }
 .main_section_content{
 	width: 50%;
+	padding: 30px;
 }
 .main_section_title{
 	color: #626262;
@@ -113,7 +122,12 @@ font-family: 'Playfair Display', serif;*/
 	padding-top: 30px;
 }
 .main_section_img{
-	padding-top: 130px;
+	display: block;
+	width: 300px;
+	min-width: 100%;
+}
+.main_section_content_img{
+	padding-top: 100px;
 }
 /*****************************************************************
 *************************SECTION**********************************
@@ -169,12 +183,10 @@ font-family: 'Playfair Display', serif;*/
 	text-decoration: none;
 	border: 1px solid black;
 	padding: 20px 35px;
+	transition: all ease .30s;
 }
 .load-more_link:hover{
-	border-right: none;
-	border-left: none;
-	border-top: none;
-	border-bottom: 2px solid black;
+	border: 4px solid black;
 }
 /*****************************************************************
 *************************FOOTER***********************************
@@ -206,6 +218,7 @@ font-family: 'Playfair Display', serif;*/
 }
 .footer_section_info-link:hover{
 	text-decoration: underline;
+	transition: all ease .15s;
 }
 /*****************************************************************
 *************************ADAPTIVE*********************************
@@ -228,6 +241,9 @@ font-family: 'Playfair Display', serif;*/
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+	}
+	.main_section_content_img{
+	padding-top: 50px;
 	}
 }
 
