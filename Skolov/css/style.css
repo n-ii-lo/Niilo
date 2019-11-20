@@ -1,7 +1,7 @@
 html{
     height: 100%;
     max-width: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
     font-size: 10px;
 }
 *{
@@ -75,10 +75,11 @@ html{
     align-items: center;
     padding-top: 7rem;
 }
-.nav__logo{
+.logo__link{
     color: #fe504f;
-    font-size: 2.2rem;
+    font-size: 3.2rem;
     font-weight: bold;
+    text-decoration: none;
 }
 .nav__items{
     display: flex;
@@ -153,9 +154,55 @@ html{
 ********************************SERVICE***************************************
 *****************************************************************************/
 .service__main__section{
-    height: 500px;
+    background: white;
 }
-
+.service__main__title{
+    font-size: 2.4rem;
+    text-align: center;
+    padding-bottom: 30px;
+    text-transform: uppercase;
+}
+.service__main__info{
+    font-size: 1.6rem;
+    text-align: center;
+    color: #b3b3b3;
+    display: block;
+    width: 940px;
+    margin: 0 auto;
+}
+.service__main__content{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    height: 500px;
+    margin-top: 7rem;
+}
+.service__box{
+    text-align: center;
+    height: 200px;
+    width: 240px;
+}
+.service__box__title{
+    display: block;
+    width: 160px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 1rem;
+}
+.service__box__title:after{
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 60px;
+    padding-top: .7rem;
+    border-bottom: 3px solid #fe504f;
+}
+.service__box__content{
+    margin-top: 10px;
+    font-size: 1.4rem;
+    line-height: 25px;
+    color: #aeaeae;
+}
 
 
 
