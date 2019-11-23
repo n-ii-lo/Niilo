@@ -583,9 +583,6 @@ html{
     font-weight: bold;
     text-transform: uppercase;
 }
-
-
-
 .form__box__right__title{
     font-size: 2.4rem;
     text-transform: uppercase;
@@ -682,7 +679,6 @@ html{
     align-items: center;
     justify-content: flex-end;
 }
-
 .box__img{
    width: 55px;
    height: 22px;
