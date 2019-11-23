@@ -21,9 +21,9 @@ html{
     background-size: 100%;
 }
 .header__background{
-    background: url(/img__header/header_bg.png);
+    background: url(/img__header/header_bg.png);                 
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     background-position: bottom;
     position: absolute;
     top: 0;
@@ -34,7 +34,7 @@ html{
 .header__background:after{
     display: block;
     content: '';
-    background: url(/img__header/header_chart.png);
+    background: url(/img__header/header_chart.png);                 /* чарт залез на кнопки */
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: bottom;
@@ -48,7 +48,7 @@ html{
 .header__background:before{
     display: block;
     content: '';
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.8);
     position: absolute;
     top: 0;
     left: 0;
@@ -56,13 +56,13 @@ html{
     height: 100vh;
     z-index: 1;
 }
-.header_content{
+.header__content{
     position: relative;
     width: 100%;
     z-index: 3;
 }
 .wrapper{
-    width: 1140px;
+    width: 1200px;
     margin: 0 auto;
 }
 /*****************************************************************************
@@ -123,13 +123,13 @@ html{
     display: flex;
     justify-content: space-between;
     width: 500px;
-    padding-top: 50px;
+    padding-top: 5rem;
 }
-.main__link{
+.big__button__link{
     text-decoration: none;
     color: white;
 }
-.main__button{
+.big__button{
     background: #fe504f;
     width: 230px;
     height: 70px;
@@ -139,7 +139,7 @@ html{
     font-size: 2rem;
     border-radius: 40px;
 }
-.main__button:hover{
+.big__button:hover{
     background: #343434;
     transition: ease .30s;
     width: 230px;
@@ -155,6 +155,7 @@ html{
 *****************************************************************************/
 .service__main__section{
     background: white;
+    height: 640px;
 }
 .service__main__title{
     font-size: 2.4rem;
@@ -175,7 +176,9 @@ html{
     flex-flow: row wrap;
     justify-content: space-between;
     height: 500px;
-    margin-top: 7rem;
+    padding-top: 7rem;
+    margin: 0 auto;
+    width: 1140px;
 }
 .service__box{
     text-align: center;
@@ -198,11 +201,513 @@ html{
     border-bottom: 3px solid #fe504f;
 }
 .service__box__content{
-    margin-top: 10px;
+    margin-top: 1rem;
     font-size: 1.4rem;
     line-height: 25px;
     color: #aeaeae;
 }
+/*****************************************************************************
+********************************CONTACT US************************************
+*****************************************************************************/
+.contact-us__section{
+    width: 100vw;
+    position: relative;
+    min-height: 420px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    align-items: center;
+}
+.contact-us__title{
+    color: white;
+    text-transform: uppercase;
+    font-size: 3.4rem;
+    text-align: center;
+    line-height: 60px;
+}
+.contact-us__button{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+}
+.contact-us__content{
+    position: relative;
+    width: 100%;
+    z-index: 3;
+}
+.contact-us__background{
+    background: url(/img__contact-us/img.png);    /* Добавить сетку для бэграунда  */
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 420px;
+}
+.contact-us__background:before{
+    display: block;
+    content: '';
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+/*****************************************************************************
+********************************ABOUT US**************************************
+*****************************************************************************/
+.about-us__section{
+    padding-bottom: 8rem;
+}
+.about-us__section__container{
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.about-us__section__title{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2.4rem;
+    padding-bottom: 3.5rem;
+}
+.about-us__section__info{
+    text-align: center;
+    width: 880px;
+    margin: 0 auto;
+    font-size: 1.6rem;
+    color: #aeaeae;
+    line-height: 25px;
+}
+.about-us__content{
+    display: flex;
+    flex-flow: row wrap;
+}
+.about-us__box-1{
+    flex: 1;
+}
+.about-us__box-2{
+    flex: 1;
+    padding-left: 6rem;
+}
+.about-us__box__title{
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fe504f;
+    padding-bottom: 3rem;
+}
+.what-we-do__box__info{                           /* Выровнять текст абзацами покрасивее */
+    font-size: 1.4rem;
+    line-height: 25px;
+    text-align: left;
+}
+.about-us__box__title:after{
+    content: "";
+    display: block;
+    width: 60px;
+    padding-top: 1.5rem;
+    border-bottom: 3px solid #fe504f;
+}
+.our-clients__box__container{                       /* Добавить слайдер */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.about-us__box__content{
+    padding-bottom: .5rem;
+}
+.our-team__box__container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+.our-team__box{
+    width: 200px;
+    height: 200px;
+    display: block;
+}
+.our-team__box__content{
+    background: #fe504f;
+    height: inherit;
+    padding: 2rem 2rem;
+}
+.our-team__name{
+    height: 120px;
+    font-size: 3.2rem;
+    font-weight: bold;
+    color: white;
+    width: 100px;
+}
+.our-team__name:after{
+    content: "";
+    display: block;
+    width: 160px;
+    padding-top: 4.5rem;
+    border-bottom: 1px solid #bb3030;
+}
+.our-team__position{
+    padding-top: 1.2rem;
+    color: white;
+    font-size: 1.2rem;
+}
+.our-team__position__bold{
+    font-weight: bold;
+}
+/*****************************************************************************
+********************************QUOTE*****************************************
+*****************************************************************************/
+.quote__info{
+    font-size: 1.6rem;
+    color: white;
+    text-align: center;
+    padding-top: 1rem;
+    line-height: 25px;
+}
+.quote__button{
+    text-align: center;
+    padding-bottom: 3.5rem;
+}
+.quote__content{
+    position: relative;
+    width: 100%;
+    z-index: 3;
+}
+.quote__background{
+    background: url(/img__quote/img.png);    /* Добавить сетку для бэграунда  */
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 420px;
+}
+.quote__background:before{
+    display: block;
+    content: '';
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+/*****************************************************************************
+********************************NEWS******************************************
+*****************************************************************************/
+.news__section{
+    padding-bottom: 8rem;
+}
+.news__container{
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.news__title{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2.4rem;
+    padding-bottom: 3.5rem;
+}
+.news__info{
+    text-align: center;
+    width: 1100px;
+    margin: 0 auto;
+    font-size: 1.6rem;
+    color: #aeaeae;
+    line-height: 25px;
+}
+.news__box__container{
+    display: flex;
+    flex-flow: row wrap;
+}
+.news__box__content{
+    padding: 3rem 3rem;
+    height: 100%;
+    position: relative;
+}
+.news__box__title{
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fe504f;
+}
+.news__box__title:after{
+    content: "";
+    display: block;
+    width: 50px;
+    padding-top: 1rem;
+    border-bottom: 3px solid #fe504f;
+}
+.news__box__info{
+    padding-top: 1.7rem;
+    font-size: 1.2rem;
+    line-height: 17px;
+    color: white;
+}
+.news__box__date{
+    font-size: 1.2rem;
+    color: #fe504f;
+    font-style: italic;
+    text-align: right;
+    position:absolute;
+    bottom: 30px;
+    right: 30px;
+    
+}
+.news__box{
+    width: 300px;
+    height: 300px;
+}
+.box-1{
+    flex: 2 0 600px;
+    background: url(/img__news/box-1.png);       /* Зделать стрелки из блока в блок  */
+}
+.box-2{
+    flex: 1 0 auto;
+    background: #343434;
+}
+.box-3{
+    flex: 1 0 auto;
+    background: url(/img__news/box-3.png);
+}
+.box-4{
+    flex: 1 0 auto;
+    background: #343434;
+}
+.box-5{
+    flex: 2 0 600px;
+    background: url(/img__news/box-5.png);
+}
+.box-6{
+    flex: 0 0 auto;
+    background: #343434;
+} 
+/*****************************************************************************
+********************************FORM******************************************
+*****************************************************************************/ 
+.form__section{
+    width: 100vw;
+    position: relative;
+    min-height: 720px;
+}
+.form__section__content{
+    position: relative;
+    width: 100%;
+    z-index: 3;
+}
+.form__section__background{
+    background: url(/img__form/bg.png);   
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.form__section__background:before{
+    display: block;
+    content: '';
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+.form__title__size{
+    font-size: 3.2rem;
+}
+.form__boxes{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10rem;
+}
+.form__box__left{
+    width: 520px;
+}
+.form__box__left__title{
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fe504f;
+    padding-bottom: 3rem;
+}
+.form__box__left__info{
+    font-size: 1.4rem;
+    color: white;
+    line-height: 22px;
+    padding-bottom: 3.5rem;
+}
+.form__box__left__info:after{
+    content: "";
+    display: block;
+    width: 50px;
+    padding-top: 2rem;
+    border-bottom: 3px solid #fe504f;
+}
+.form__box__left__contact{
+    display: flex;
+    height: 120px;
+}
+.form__box__left__contact-img{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.form__box__left__contact-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 1.5rem;
+}
+.form__box__info{
+    display: flex;
+    align-items: center;
+    height: 30px;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+
+.form__box__right__title{
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fe504f;
+}
+.form__box__right__title:after{
+    content: "";
+    display: block;
+    width: 50px;
+    padding-top: 1rem;
+    border-bottom: 3px solid #fe504f;
+}
+.form__box__right__info{
+    padding-top: 2.5rem;
+    font-size: 1.4rem;
+    color: white;
+}
+.form__box__right{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.contact__form{
+    padding-top: 4rem;
+    height: 480px;
+    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.form{
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.contact-form__input-wrapper{
+    height: 40px;
+}
+.contact__input{
+    width: 100%;
+    height: 100%;
+    border: 1px solid white;
+    padding-left: 1.5rem;
+    background-color: transparent;
+    color: white;
+}
+.contact-textarea{
+    background-color: transparent;
+    padding: 1.5rem;
+    resize: none;
+    height: 190px;
+    border: 1px solid white;
+    color: white;
+}
+.contact__button{
+    width: 130px;
+    height: 40px;
+    font-size: 1.6rem;
+    background-color: #fe504f;
+    color: white;
+    border: none;
+    border-radius: 40px;
+}
+.button__wrapper{
+    align-self: flex-end;
+}
+/*****************************************************************************
+********************************FOOTER****************************************
+*****************************************************************************/
+.footer__section{
+    background-color: #343434;
+}
+.footer__boxes{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer__box__info{
+    display: flex;
+    align-items: center;
+}
+.footer__info{
+    color: white;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.footer__box__img{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.box__img{
+   width: 55px;
+   height: 22px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-left: 1px solid #fe504f;
+}
+.box__img:first-child{
+    border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
