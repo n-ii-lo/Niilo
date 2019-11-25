@@ -48,7 +48,7 @@ html{
 .header__background:before{
     display: block;
     content: '';
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.7);
     position: absolute;
     top: 0;
     left: 0;
@@ -249,7 +249,7 @@ html{
 .contact-us__background:before{
     display: block;
     content: '';
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.7);
     position: absolute;
     top: 0;
     left: 0;
@@ -392,7 +392,7 @@ html{
 .quote__background:before{
     display: block;
     content: '';
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.7);
     position: absolute;
     top: 0;
     left: 0;
