@@ -437,6 +437,48 @@ html{
     height: 100%;
     position: relative;
 }
+.box__arrow-left,
+.box__arrow-right,
+.box__arrow-top{
+    position: relative;
+    z-index: 10;
+}
+.box__arrow-left:after,
+.box__arrow-right:after,
+.box__arrow-top:after{
+    content: '';
+    width: 0;
+    height: 0;
+    display: block;
+    position: absolute;
+    z-index: 10;
+    border: 0;
+}
+.box__arrow-left:after{
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    margin-top: -10px;
+    top: 15%;
+    border-right: 25px solid #343434;
+    left: -25px;
+}
+.box__arrow-right:after{
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    margin-top: -10px;
+    top: 15%;
+    border-left: 25px solid #343434;
+    left: auto;
+    right: -25px;
+}
+.box__arrow-top:after{
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    margin-left: -10px;
+    left: 75%;
+    border-bottom: 25px solid #343434;
+    top: -25px;
+}
 .news__box__title{
     font-size: 2rem;
     text-transform: uppercase;
