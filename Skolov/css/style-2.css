@@ -108,7 +108,7 @@ html{
 *****************************************************************************/
 .news__section{
     background: linear-gradient(to bottom, transparent 0%, transparent 35%, white 35%, white 100%);
-}
+}                                                                                                       /*зделать строку поиска*/
 .news__content{
     position: relative;
     z-index: 3;
@@ -119,6 +119,48 @@ html{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.box__arrow-left,
+.box__arrow-right,
+.box__arrow-top{
+    position: relative;
+    z-index: 10;
+}
+.box__arrow-left:after,
+.box__arrow-right:after,
+.box__arrow-top:after{
+    content: '';
+    width: 0;
+    height: 0;
+    display: block;
+    position: absolute;
+    z-index: 10;
+    border: 0;
+}
+.box__arrow-left:after{
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    margin-top: -10px;
+    top: 15%;
+    border-right: 25px solid #343434;
+    left: -25px;
+}
+.box__arrow-right:after{
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    margin-top: -10px;
+    top: 15%;
+    border-left: 25px solid #343434;
+    left: auto;
+    right: -25px;
+}
+.box__arrow-top:after{
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    margin-left: -10px;
+    left: 75%;
+    border-bottom: 25px solid #343434;
+    top: -25px;
 }
 .news__title{
     text-align: center;
@@ -179,7 +221,7 @@ html{
 }
 .box-1{
     flex: 2 0 600px;
-    background: url(../img__news/box-1.png);       /* Зделать стрелки из блока в блок  */
+    background: url(../img__news/box-1.png);       
 }
 .box-2{
     flex: 1 0 auto;
