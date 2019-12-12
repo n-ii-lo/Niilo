@@ -5,7 +5,7 @@ html{
   font-size: 10px;
 }
 *{
-padding: 0;
+  padding: 0;
   margin: 0;
   font-family: Verdana, sans-serif;
   box-sizing: border-box;
@@ -355,5 +355,117 @@ padding: 0;
 }
 .box__img:first-child{
   border: none;
+}
+@media screen and (max-width: 1240px) {
+  .wrapper{
+    width: 768px;
+  }
+  .header__background:after{
+  display: block;
+  content: '';
+  background: url(../img__header/header_chart.png);             
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  z-index: 2;
+}
+.news__section{
+  background: linear-gradient(to bottom, transparent 0%, transparent 30%, white 30%, white 100%);
+} 
+  .box-1{
+  flex: 2 0 600px;
+  background: url(../img__news/box-1.png);
+  background-size: cover;   
+}
+.box-2{
+  flex: 1 0 auto;
+  background: #343434;
+  order: 
+}
+.box-3{
+  flex: 0 0 auto;
+  background: url(../img__news/box-3.png);
+  order: 
+}
+.box-4{
+  flex: 0 0 auto;
+  background: #343434;
+  order: 
+}
+.box-5{
+  flex: 0 0 600px;
+  background: url(../img__news/box-5.png);
+  order: 
+}
+.box-6{
+  flex: 0 0 auto;
+  background: #343434;
+  order: 
+}
+.box-7{
+  flex: 0 0 600px;
+  background: url(../img__news/box-7.png); 
+}
+.box-9{
+  flex: 0 0 auto;
+  background: url(../img__news/box-9.png);
+}
+.box-11{
+  flex: 0 0 600px;
+  background: url(../img__news/box-11.png);
+}
+  .box__arrow-left,
+  .box__arrow-right,
+  .box__arrow-top{
+  position: relative;
+  z-index: 10;
+  }
+  .box__arrow-left:after,
+  .box__arrow-right:after,
+  .box__arrow-top:after{
+  content: '';
+  width: 0;
+  height: 0;
+  display: block;
+  position: absolute;
+  z-index: 10;
+  border: 0;
+  }
+  .box__arrow-left:after{
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  margin-left: -10px;
+  left: 15%;
+  border-bottom: 25px solid #343434;
+  top: -15px;
+  }
+  .box__arrow-right:after{
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  margin-left: -10px;
+  left: 15%;
+  border-top: 25px solid #343434;
+  top: 310px;
+  }
+  .box__arrow-top:after{
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  margin-left: -10px;
+  left: 75%;
+  border-bottom: 25px solid #343434;
+  top: -25px;
+  }
+  .form__box__left{
+  padding-right: 5rem;
+  }
+  .what-we-do__box__info{
+  text-align: center;
+  }
+
 }
 
