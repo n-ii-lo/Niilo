@@ -293,3 +293,16 @@ html{
 .box__img:first-child{
   border: none;
 }
+@media screen and (max-width: 1240px) {
+  .wrapper{
+    width: 768px;
+  }
+  .main__img{
+    width: 768px;
+  }
+  .main__section__box__info{
+    bottom: 80px;
+  }
+  .main__section__box__info__container{
+    height: 400px;
+  }

@@ -375,49 +375,61 @@ html{
   z-index: 2;
 }
 .news__section{
-  background: linear-gradient(to bottom, transparent 0%, transparent 30%, white 30%, white 100%);
+  background: linear-gradient(to bottom, transparent 0%, transparent 20%, white 20%, white 100%);
 } 
-  .box-1{
+.box-1{
   flex: 2 0 600px;
   background: url(../img__news/box-1.png);
-  background-size: cover;   
+  background-size: cover; 
+  order: 
 }
 .box-2{
   flex: 1 0 auto;
   background: #343434;
-  order: 
+  order
 }
 .box-3{
   flex: 0 0 auto;
   background: url(../img__news/box-3.png);
-  order: 
+  order
 }
 .box-4{
-  flex: 0 0 auto;
+  flex: 2 0 auto;
   background: #343434;
-  order: 
+  
 }
 .box-5{
-  flex: 0 0 600px;
+  flex: 2 0 600px;
   background: url(../img__news/box-5.png);
-  order: 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 -80px;
+  order
 }
 .box-6{
-  flex: 0 0 auto;
+  flex: 1 0 auto;
   background: #343434;
-  order: 
+  order
 }
 .box-7{
-  flex: 0 0 600px;
-  background: url(../img__news/box-7.png); 
+  flex: 2 0 600px;
+  background: url(../img__news/box-7.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 -50px;
+  order 
 }
 .box-9{
   flex: 0 0 auto;
   background: url(../img__news/box-9.png);
+  order: 
 }
 .box-11{
-  flex: 0 0 600px;
+  flex: 2 0 600px;
   background: url(../img__news/box-11.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  order: 
 }
   .box__arrow-left,
   .box__arrow-right,
