@@ -21,7 +21,7 @@ html{
   background-size: 100%;
 }
 .header__background{
-  background: url(../img__header/header_bg.png);    /* сделать картинку Your profile со стрелочкой */          
+  background: url(../img/img__header/header_bg.png);    /* сделать картинку Your profile со стрелочкой */          
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
@@ -34,7 +34,7 @@ html{
 .header__background:after{
   display: block;
   content: '';
-  background: url(../img__header/header_chart.png);             
+  background: url(../img/img__header/header_chart.png);             
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;

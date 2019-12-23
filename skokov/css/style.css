@@ -21,7 +21,7 @@ html{
   background-size: 100%;                                                  
 }
 .header__background{
-  background: url(../img__header/header_bg.png);                 
+  background: url(../img/img__header/header_bg.png);                 
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -34,7 +34,7 @@ html{
 .header__background:after{
   display: block;
   content: '';
-  background: url(../img__header/header_chart.png);                 
+  background: url(../img/img__header/header_chart.png);                 
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: bottom;
@@ -237,7 +237,7 @@ html{
   z-index: 3;
 }
 .contact-us__background{
-  background: url(../img__contact-us/img.png);    
+  background: url(../img/img__contact-us/img.png);    
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
@@ -380,7 +380,7 @@ html{
   z-index: 3;
 }
 .quote__background{
-  background: url(../img__quote/img.png);    
+  background: url(../img/img__quote/img.png);    
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
@@ -514,7 +514,7 @@ html{
 }
 .box-1{
   flex: 2 0 600px;
-  background: url(../img__news/box-1.png);       
+  background: url(../img/img__news/box-1.png);       
 }
 .box-2{
   flex: 1 0 auto;
@@ -522,7 +522,7 @@ html{
 }
 .box-3{
   flex: 1 0 auto;
-  background: url(../img__news/box-3.png);
+  background: url(../img/img__news/box-3.png);
 }
 .box-4{
   flex: 1 0 auto;
@@ -530,7 +530,7 @@ html{
 }
 .box-5{
   flex: 2 0 600px;
-  background: url(../img__news/box-5.png);
+  background: url(../img/img__news/box-5.png);
 }
 .box-6{
   flex: 0 0 auto;
@@ -807,7 +807,7 @@ html{
   }
   .box-1{
   flex: 2 0 600px;
-  background: url(../img__news/box-1.png); 
+  background: url(../img/img__news/box-1.png); 
   background-repeat: no-repeat;
   background-size: cover;    
   }
@@ -817,7 +817,7 @@ html{
   }
   .box-3{
     flex: 1 0 auto;
-    background: url(../img__news/box-3.png);
+    background: url(../img/img__news/box-3.png);
   }
   .box-4{
     flex: 1 0 auto;
@@ -826,7 +826,7 @@ html{
   }
   .box-5{
     flex: 1 0 600px;
-    background: url(../img__news/box-5.png);
+    background: url(../img/img__news/box-5.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0 -8rem;
