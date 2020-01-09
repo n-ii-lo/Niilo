@@ -1,5 +1,7 @@
 let x = new Array(9);
 
+alert('Покажи что умеешь!');
+
 function zero() {
 	let id = Math.floor(Math.random() * 9);
 	x[id] ? zero() : move(id, 'zero');
@@ -20,7 +22,7 @@ function checkEnd() {
 function move(id, role) {
 	if(x[id]) return false;
 	x[id] = role;
-	document.getElementById(id).className = 'cell ' + role;
+	document.getElementById(id).className = 'main-template__box ' + role;
 	!checkEnd() ? (role == 'hero') ? zero() : null : reset();
 }
 
