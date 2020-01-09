@@ -1,7 +1,5 @@
 let x = new Array(9);
 
-alert('Покажи что умеешь!');
-
 function zero() {
 	let id = Math.floor(Math.random() * 9);
 	x[id] ? zero() : move(id, 'zero');
