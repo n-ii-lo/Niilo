@@ -13,12 +13,29 @@
 //<ШРИФТЫ>===============================================================================================
 
 //<Подключаем шрифты>=======================================================================================
-
+@font-face {
+	font-family: 'OpenSans';
+	src: url("../../fonts/OpenSans.woff") format("woff"); 
+	font-style: normal;
+	font-weight: normal;
+	}
+// @font-face {
+// 	font-family: 'OpenSans';
+// 	src: url("../../fonts/OpenSans.woff") format("woff"); 
+// 	font-style: normal;
+// 	font-weight: normal;
+// 	}
+// @font-face {
+// 	font-family: 'OpenSans';
+// 	src: url("../../fonts/OpenSans.woff") format("woff"); 
+// 	font-style: normal;
+// 	font-weight: normal;
+// 	}
 //</Подключаем шрифты>=======================================================================================
 
 
 //<Шрифт по умолчанию>==========================================================================================
-$fontfamily:"";
+$fontfamily:"OpenSans";
 //</Шрифт по умолчанию>==========================================================================================
 
 //</ШРИФТЫ>=======================================================================================================
@@ -26,10 +43,10 @@ $fontfamily:"";
 //<ПЕРЕМЕННЫЕ>===========================================================================================================
 $minwidth:320px;
 $mw:960;
-$md1:$mw+12;
+$md1:$mw+15;
 $md2:768;
 $md3:576;
-$md4:479.98;
+$md4:480;
 //</ПЕРЕМЕННЫЕ>===========================================================================================================
 
 //<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
@@ -38,7 +55,7 @@ $md4:479.98;
 :focus,:active{outline: none;}
 a:focus,a:active{outline: none;}
 aside,nav,footer,header,section{display: block;}
-html,body{font-size: 10px; height: 100%;margin: 0;padding: 0;min-width: $minwidth;position: relative;width: 100%;color: #000;}
+html,body{font-size: 62.5%; height: 100%;margin: 0;padding: 0;min-width: $minwidth;position: relative;width: 100%;color: #000;}
 body{font-size: 100%;line-height: 1;font-size: 14px;font-family: $fontfamily;-ms-text-size-adjust: 100%;-moz-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;
 	&.lock{overflow: hidden;
 		@media (max-width:$md3+px){
@@ -67,9 +84,9 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 
 //<ОСНОВНАЯ СЕТКА>===========================================================================================================
 .container{max-width:$mw+px;margin: 0 auto;width: 100%;
-	@media (max-width:$md1+px){max-width: 970px;}
-	@media (max-width:$md2+px){max-width: 750px;}
-	@media (max-width:$md3+px){max-width: none;padding:0 10px;}
+	@media (max-width:$md1+px){max-width: 768px;}
+	@media (max-width:$md2+px){max-width: 576px;}
+	@media (max-width:$md3+px){max-width: 480px;padding:0 25px;}
 }
 //</ОСНОВНАЯ СЕТКА>===========================================================================================================
 
@@ -80,13 +97,26 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 
 //<ОСНОВНОЙ БЛОК>====================================================================================================
 .content {
-	padding: 12rem 0 16.8rem 0px;
+	padding: 120px 0 168px 0px;
+	@media (max-width:$md1+px){
+		padding: 100px 0px 0px 0px;
+	}
+	@media (max-width:$md2+px){
+		padding: 100px 0px 0px 0px;
+	}
 	&__text {
-		padding: 0 0 3rem 0;
+		padding: 0 0 30px 0;
 		color: #4A4A4A;
 		font-size: 3.6rem;
 		font-weight: 300;
 		line-height: 45px;
+		@media (max-width:$md1+px){
+			font-size: 3.2rem;
+		}
+		@media (max-width:$md2+px){
+			font-size: 2.4rem;
+			line-height: 32px;
+		}
 	}
 }
 .view {
