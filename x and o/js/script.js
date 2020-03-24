@@ -25,6 +25,10 @@ function move(id, role) {
 }
 
 function reset() {
+<<<<<<< HEAD
 	alert('Игра окончена!');
+=======
+	alert('Game end!');
+>>>>>>> master
 	location.reload();
 }
