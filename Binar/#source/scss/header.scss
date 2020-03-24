@@ -7,21 +7,25 @@
 @mixin tr($x,$y,$z){transform: translate3d($x, $y, $z);};
 @mixin flexbox() {display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display: flex;font-size: 0;}
 @mixin flexorder($val){-webkit-box-ordinal-group: $val;-moz-box-ordinal-group: $val;-ms-flex-order: $val;-webkit-order: $val;order: $val;}
+@font-face {
+	font-family: 'OpenSans';
+	src: url("../../fonts/OpenSans.woff") format("woff"); 
+	font-style: normal;
+	font-weight: normal;
+	}
 //====================================================================================================
 .header {
 	&__body {
 		@include flexbox();
 		height: 100vh;
 		justify-content: flex-start;
-		
-
 	}
 	&__box {
 		@include flexbox();
 		width: 1000px;
 		height: 35px;
-		padding: 0 4rem 0 4rem;
-		margin: 4rem 0 4rem 0;
+		padding: 0 40px 0 40px;
+		margin: 40px 0 40px 0;
 	}
 	&__column {}
 	&__logo{
@@ -33,28 +37,37 @@
 .menu-header {
 	@include flexbox();
 	align-self: flex-end;
-	padding: 0 0 0 2rem;
+	padding: 0 0 0 20px;
 	&__icon {
 		display: none;
-		position: absolute;
-		top: 18px;
-		right: 10px;
-		width:30px;
-		height: 18px;
+		position: relative;
+		width:18px;
+		height: 10px;
 		cursor: pointer;
 		z-index: 5;
-		span{@include anim(0.3s,0s);top: 8px;left: 0px;position: absolute;width: 100%;height: 2px;background-color: #000;
+		span{@include anim(0.3s,0s);top: 10px;left: 0px;position: absolute;width: 100%;height: 1px;background-color: #000;
 			&:first-child{top: 0px;}
-			&:last-child{top: auto;bottom: 0px;}
+			// &:last-child{top: auto;bottom: 0px;}
 		}
 		&.active{
 			span{@include scale(0);
 				&:first-child{@include rotate(-45deg);top: 8px;}
-				&:last-child{@include rotate(45deg);bottom: 8px;}
+				// &:last-child{@include rotate(45deg);bottom: 8px;}
 			}
 		}
+		@media (max-width:$md1+px){
+			display: block;
 	}
 	&__menu {
+		@media (max-width:$md1+px){
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background-color: white;
+			z-index: 2;
+		}
 	}
 	&__link {
 			color: #E6E3E1;
@@ -85,33 +98,10 @@
 	&__list {
 		@include flexbox();
 		li{
-			padding: 0 0 0 3rem;
+			padding: 0 0 0 30px;
 		}
 	}
 
 
 }
 //====================================================================================================
-
-/*
-	.header-menu__icon{
-		display: block;
-		position: absolute;
-		top: 18px;
-		right: 10px;
-		width:30px;
-		height: 18px;
-		cursor: pointer;
-		z-index: 5;
-		span{@include anim(0.3s,0s);top: 8px;left: 0px;position: absolute;width: 100%;height: 2px;background-color: #000;
-			&:first-child{top: 0px;}
-			&:last-child{top: auto;bottom: 0px;}
-		}
-		&.active{
-			span{@include scale(0);
-				&:first-child{@include rotate(-45deg);top: 8px;}
-				&:last-child{@include rotate(45deg);bottom: 8px;}
-			}
-		}
-	}
-*/
