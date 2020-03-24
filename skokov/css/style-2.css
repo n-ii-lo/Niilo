@@ -363,7 +363,11 @@ html{
   .header__background:after{
   display: block;
   content: '';
+<<<<<<< HEAD:Skolov/css/style-2.css
+  background: url(../img__header/header_chart.png);             
+=======
   background: url(../img/img__header/header_chart.png);             
+>>>>>>> master:skokov/css/style-2.css
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
@@ -375,6 +379,14 @@ html{
   z-index: 2;
 }
 .news__section{
+<<<<<<< HEAD:Skolov/css/style-2.css
+  background: linear-gradient(to bottom, transparent 0%, transparent 30%, white 30%, white 100%);
+} 
+  .box-1{
+  flex: 2 0 600px;
+  background: url(../img__news/box-1.png);
+  background-size: cover;   
+=======
   background: linear-gradient(to bottom, transparent 0%, transparent 20%, white 20%, white 100%);
 } 
 .box-1{
@@ -382,10 +394,46 @@ html{
   background: url(../img/img__news/box-1.png);
   background-size: cover; 
   order: 
+>>>>>>> master:skokov/css/style-2.css
 }
 .box-2{
   flex: 1 0 auto;
   background: #343434;
+<<<<<<< HEAD:Skolov/css/style-2.css
+  order: 
+}
+.box-3{
+  flex: 0 0 auto;
+  background: url(../img__news/box-3.png);
+  order: 
+}
+.box-4{
+  flex: 0 0 auto;
+  background: #343434;
+  order: 
+}
+.box-5{
+  flex: 0 0 600px;
+  background: url(../img__news/box-5.png);
+  order: 
+}
+.box-6{
+  flex: 0 0 auto;
+  background: #343434;
+  order: 
+}
+.box-7{
+  flex: 0 0 600px;
+  background: url(../img__news/box-7.png); 
+}
+.box-9{
+  flex: 0 0 auto;
+  background: url(../img__news/box-9.png);
+}
+.box-11{
+  flex: 0 0 600px;
+  background: url(../img__news/box-11.png);
+=======
   order
 }
 .box-3{
@@ -430,6 +478,7 @@ html{
   background-repeat: no-repeat;
   background-size: cover;
   order: 
+>>>>>>> master:skokov/css/style-2.css
 }
   .box__arrow-left,
   .box__arrow-right,
