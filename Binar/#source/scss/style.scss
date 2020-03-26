@@ -42,7 +42,7 @@ $fontfamily:"OpenSans";
 
 //<ПЕРЕМЕННЫЕ>===========================================================================================================
 $minwidth:320px;
-$mw:960;
+$mw:992;
 $md1:$mw+15;
 $md2:768;
 $md3:576;
@@ -55,8 +55,8 @@ $md4:480;
 :focus,:active{outline: none;}
 a:focus,a:active{outline: none;}
 aside,nav,footer,header,section{display: block;}
-html,body{font-size: 62.5%; height: 100%;margin: 0;padding: 0;min-width: $minwidth;position: relative;width: 100%;color: #000;}
-body{font-size: 100%;line-height: 1;font-size: 14px;font-family: $fontfamily;-ms-text-size-adjust: 100%;-moz-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;
+html,body{font-size: 10px;height: 100%;margin: 0;padding: 0;min-width: $minwidth;position: relative;width: 100%;color: #000;}
+body{font-size: 100%;;line-height: 1;font-family: $fontfamily;-ms-text-size-adjust: 100%;-moz-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;
 	&.lock{overflow: hidden;
 		@media (max-width:$md3+px){
 			width: 100%;
@@ -84,9 +84,9 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 
 //<ОСНОВНАЯ СЕТКА>===========================================================================================================
 .container{max-width:$mw+px;margin: 0 auto;width: 100%;
-	@media (max-width:$md1+px){max-width: 768px;}
-	@media (max-width:$md2+px){max-width: 576px;}
-	@media (max-width:$md3+px){max-width: 480px;padding:0 25px;}
+	@media (max-width:$md1+px){max-width: 992px;}
+	@media (max-width:$md2+px){max-width: 768px;}
+	@media (max-width:$md3+px){max-width: 576px;padding:0 25px;}
 }
 //</ОСНОВНАЯ СЕТКА>===========================================================================================================
 
@@ -97,7 +97,6 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 
 //<ОСНОВНОЙ БЛОК>====================================================================================================
 .content {
-	padding: 120px 0 168px 0px;
 	@media (max-width:$md1+px){
 		padding: 100px 0px 0px 0px;
 	}
@@ -117,6 +116,11 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 			font-size: 2.4rem;
 			line-height: 32px;
 		}
+	}
+}
+.maintext {
+	&__block {
+		padding: 120px 0 168px 0px;
 	}
 }
 .view {
@@ -147,6 +151,99 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 	}
 }
 
+.material {
+	&__block {
+		@include flexbox();
+		justify-content: center;
+		align-items: center;
+		padding: 200px 0px 200px 0px;
+		@media (max-width:$md3+px){
+			padding: 150 0px 150 0px;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+}
+.block {
+	&__img-box {
+		max-width: 100%;
+		display: block;
+		height: auto;
+		@media (max-width:$md1+px){
+			max-width: 100%;
+			img{
+				width: 100%;
+			}
+		}
+	}
+	&__text-box {
+		max-width: 100%;
+		padding: 0px 0px 0px 100px;
+		flex: 0 100%;
+		@media (max-width:$md1+px){
+			max-width: 100%;
+			padding: 0px 0px 0px 40px;
+			flex: 0 60%;
+		}
+		@media (max-width:$md3+px){
+			padding: 30px 0px 0px 0px;
+		}
+	}
+}
+.text-box {
+	max-width: 100%;
+	&__label {
+		font-size: 1.6rem;
+		color: #4A4A4A;
+		padding: 0px 0px 5px 0px;
+	}
+	&__text {
+		font-size: 2.6rem;
+		color: #4A4A4A;
+		padding: 0px 0px 60px 0px;
+	}
+}
+.simple {
+	&__block {
+		@include flexbox();
+		justify-content: center;
+		align-items: center;
+		padding: 200px 0px 200px 0px;
+		@media (max-width:$md3+px){
+		padding: 150px 0px 150px 0px;
+		flex-direction: column;
+		align-items: flex-start;
+		}
+	}
+	&__text-box {
+		max-width: 100%;
+		padding: 0px 100px 0px 0px;
+		flex: 0 100%;
+		@media (max-width:$md1+px){
+			max-width: 100%;
+			padding: 0px 40px 0px 0px;
+			flex: 0 60%;
+		}
+		@media (max-width:$md3+px){
+			padding: 30px 0px 0px 0px;
+			order: 2;
+		}
+	}
+	&__img-box {
+		max-width: 100%;
+		display: block;
+		height: auto;
+		@media (max-width:$md1+px){
+			max-width: 100%;
+			img{
+				width: 100%;
+			}
+		}
+		@media (max-width:$md3+px){
+			order: 1;
+		}
+	}
+}
 //====================================================================================================
 
 //</ОСНОВНОЙ БЛОК>====================================================================================================

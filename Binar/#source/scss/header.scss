@@ -7,44 +7,137 @@
 @mixin tr($x,$y,$z){transform: translate3d($x, $y, $z);};
 @mixin flexbox() {display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display: flex;font-size: 0;}
 @mixin flexorder($val){-webkit-box-ordinal-group: $val;-moz-box-ordinal-group: $val;-ms-flex-order: $val;-webkit-order: $val;order: $val;}
+//</МИКСИНЫ>===============================================================================================
+
+//<ШРИФТЫ>===============================================================================================
+
+//<Подключаем шрифты>=======================================================================================
 @font-face {
 	font-family: 'OpenSans';
 	src: url("../../fonts/OpenSans.woff") format("woff"); 
 	font-style: normal;
 	font-weight: normal;
 	}
+// @font-face {
+// 	font-family: 'OpenSans';
+// 	src: url("../../fonts/OpenSans.woff") format("woff"); 
+// 	font-style: normal;
+// 	font-weight: normal;
+// 	}
+// @font-face {
+// 	font-family: 'OpenSans';
+// 	src: url("../../fonts/OpenSans.woff") format("woff"); 
+// 	font-style: normal;
+// 	font-weight: normal;
+// 	}
+//</Подключаем шрифты>=======================================================================================
+
+
+//<Шрифт по умолчанию>==========================================================================================
+$fontfamily:"OpenSans";
+//</Шрифт по умолчанию>==========================================================================================
+
+//</ШРИФТЫ>=======================================================================================================
+
+//<ПЕРЕМЕННЫЕ>===========================================================================================================
+$minwidth:320px;
+$mw:960;
+$md1:$mw+15;
+$md2:768;
+$md3:576;
+$md4:480;
+//</ПЕРЕМЕННЫЕ>===========================================================================================================
+
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+*{padding: 0px;margin: 0px;border: 0px;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+aside,nav,footer,header,section{display: block;}
+html,body{font-size: 62.5%; height: 100%;margin: 0;padding: 0;min-width: $minwidth;position: relative;width: 100%;color: #000;}
+body{font-size: 100%;line-height: 1;font-size: 14px;font-family: $fontfamily;-ms-text-size-adjust: 100%;-moz-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;
+	&.lock{overflow: hidden;
+		@media (max-width:$md3+px){
+			width: 100%;
+			position: fixed;
+			overflow: hidden;
+		}
+	}
+}
+input,button,textarea{font-family: $fontfamily;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
+//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+
+//<ОБОЛОЧКА>===========================================================================================================
+.wrapper{width: 100%;min-height: 100%;overflow: hidden;
+	&.loaded{}
+}
+//</ОБОЛОЧКА>===========================================================================================================
+
+//<ОСНОВНАЯ СЕТКА>===========================================================================================================
+.container{max-width:$mw+px;margin: 0 auto;width: 100%;
+	@media (max-width:$md1+px){max-width: 768px;}
+	@media (max-width:$md2+px){max-width: 576px;}
+	@media (max-width:$md3+px){max-width: 480px;padding:0 25px;}
+}
+	@font-face {
+		font-family: 'OpenSans';
+		src: url("../../fonts/OpenSans.woff") format("woff"); 
+		font-style: normal;
+		font-weight: normal;
+		}
 //====================================================================================================
 .header {
 	&__body {
-		@include flexbox();
 		height: 100vh;
-		justify-content: flex-start;
 	}
 	&__box {
 		@include flexbox();
-		width: 1000px;
-		height: 35px;
-		padding: 0 40px 0 40px;
-		margin: 40px 0 40px 0;
+		width: 100%;
+		height: 115px;
+		padding: 40px 40px;
+		margin: 0px 0 0px 0;
+		@media (max-width:$md1+px){
+			width: 100%;
+			@include flexbox();
+			justify-content: space-between;
+			align-items: center;
+			padding: 0 40px;
+		}
 	}
 	&__column {}
 	&__logo{
 		display: inline-block;
 		width: 102px;
 		img{max-width: 100%;}
+		@media (max-width:$md1+px){
+			width: 102px;
+			img{
+				max-width: 100%;
+				display: block;
+			}
+		}
 	}
 }
 .menu-header {
 	@include flexbox();
-	align-self: flex-end;
-	padding: 0 0 0 20px;
+	padding: 0px 0px 0px 30px;
+	@media (max-width:$md1+px){
+		padding: 0;
+	}
 	&__icon {
 		display: none;
 		position: relative;
-		width:18px;
+		width: 18px;
 		height: 10px;
 		cursor: pointer;
-		z-index: 5;
 		span{@include anim(0.3s,0s);top: 10px;left: 0px;position: absolute;width: 100%;height: 1px;background-color: #000;
 			&:first-child{top: 0px;}
 			// &:last-child{top: auto;bottom: 0px;}
@@ -57,16 +150,17 @@
 		}
 		@media (max-width:$md1+px){
 			display: block;
+		}
 	}
 	&__menu {
+		@include flexbox();
+		align-items: flex-end;
 		@media (max-width:$md1+px){
 			position: fixed;
 			width: 100%;
 			height: 100%;
 			top: 0;
 			left: 0;
-			background-color: white;
-			z-index: 2;
 		}
 	}
 	&__link {
@@ -97,11 +191,20 @@
 	}
 	&__list {
 		@include flexbox();
+		@media (max-width:$md1+px){
+			flex-direction: column;
+			position: absolute;
+			top: 20px;
+			right: 100px;
+			display: none;
+		}
 		li{
 			padding: 0 0 0 30px;
+			@media (max-width:$md1+px){
+				margin: 0px 0px 10px 0px;
+			}
 		}
 	}
-
 
 }
 //====================================================================================================
