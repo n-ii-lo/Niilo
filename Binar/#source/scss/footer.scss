@@ -1,5 +1,51 @@
-footer{}
 //====================================================================================================
+.footer-body {
+	padding: 0px 0px 200px 0px;
+	@media (max-width:$md2+px){
+		padding: 0px 0px 120px 0px;
+	}
+	@media (max-width:$md3+px){
+		padding: 0px 0px 235px 0px;
+	}
+		&__column {
+			padding: 0px 0px 135px 0px;
+			
+			&:last-child{
+				padding: 0;
+			}
+		}
+		&__label {
+			font-size: 3.6rem;
+			padding: 0px 0px 20px 0px;
+		}
+		&__button {}
+		&__contacts {
+			&:last-child{
+				align-self: flex-end;
+			}
+			@media (max-width:$md2+px){
+				&:last-child{
+					align-self: flex-start;
+				}
+				padding: 0px 0px 50px 0px;
+			}
+		}
+		&__text {
+			font-size: 2.2rem;
+			padding: 0px 0px 10px 0px;
+		}
+}
+.footer-flex{
+	@include flexbox();
+	justify-content: space-between;
+	align-items: flex-start;
+	flex-flow: row;
+	// height: 130px;
+	@media (max-width:$md2+px){
+		flex-flow: column;
+
+	}
+}
 
 //====================================================================================================
 

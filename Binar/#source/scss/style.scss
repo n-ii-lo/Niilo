@@ -42,11 +42,11 @@ $fontfamily:"OpenSans";
 
 //<ПЕРЕМЕННЫЕ>===========================================================================================================
 $minwidth:320px;
-$mw:960;
+$mw:940;
 $md1:$mw+15;
-$md2:768;
-$md3:576;
-$md4:480;
+$md2:992.98; 
+$md3:767.98; 
+$md4:479.98;
 //</ПЕРЕМЕННЫЕ>===========================================================================================================
 
 //<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
@@ -55,8 +55,8 @@ $md4:480;
 :focus,:active{outline: none;}
 a:focus,a:active{outline: none;}
 aside,nav,footer,header,section{display: block;}
-html,body{font-size: 62.5%; height: 100%;margin: 0;padding: 0;min-width: $minwidth;position: relative;width: 100%;color: #000;}
-body{font-size: 100%;line-height: 1;font-size: 14px;font-family: $fontfamily;-ms-text-size-adjust: 100%;-moz-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;
+html,body{font-size: 10px;height: 100%;margin: 0;padding: 0;min-width: $minwidth;position: relative;width: 100%;color: #000;}
+body{font-size: 100%;line-height: 1;font-family: $fontfamily;-ms-text-size-adjust: 100%;-moz-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;
 	&.lock{overflow: hidden;
 		@media (max-width:$md3+px){
 			width: 100%;
@@ -84,9 +84,9 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 
 //<ОСНОВНАЯ СЕТКА>===========================================================================================================
 .container{max-width:$mw+px;margin: 0 auto;width: 100%;
-	@media (max-width:$md1+px){max-width: 768px;}
-	@media (max-width:$md2+px){max-width: 576px;}
-	@media (max-width:$md3+px){max-width: 480px;padding:0 25px;}
+	@media (max-width:$md1+px){max-width: 992px;padding:0 25px;}
+	@media (max-width:$md2+px){max-width: 768px;padding:0 80px;}
+	@media (max-width:$md3+px){max-width: 576px;padding:0 25px;}
 }
 //</ОСНОВНАЯ СЕТКА>===========================================================================================================
 
@@ -97,10 +97,6 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 
 //<ОСНОВНОЙ БЛОК>====================================================================================================
 .content {
-	padding: 120px 0 168px 0px;
-	@media (max-width:$md1+px){
-		padding: 100px 0px 0px 0px;
-	}
 	@media (max-width:$md2+px){
 		padding: 100px 0px 0px 0px;
 	}
@@ -110,13 +106,18 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 		font-size: 3.6rem;
 		font-weight: 300;
 		line-height: 45px;
-		@media (max-width:$md1+px){
+		@media (max-width:$md2+px){
 			font-size: 3.2rem;
 		}
-		@media (max-width:$md2+px){
+		@media (max-width:$md3+px){
 			font-size: 2.4rem;
 			line-height: 32px;
 		}
+	}
+}
+.maintext {
+	&__block {
+		padding: 120px 0 168px 0px;
 	}
 }
 .view {
@@ -146,6 +147,175 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 		}
 	}
 }
+
+.material {
+	&__block {
+		@include flexbox();
+		justify-content: center;
+		align-items: center;
+		padding: 200px 0px 200px 0px;
+		// &:last-child{
+		// 	padding: 0px 0px 0px 0px;
+		// }
+		@media (max-width:$md3+px){
+			padding: 150 0px 150 0px;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+}
+.block {
+	&__img-box {
+		max-width: 100%;
+		display: block;
+		height: auto;
+		@media (max-width:$md2+px){
+			max-width: 100%;
+			img{
+				width: 100%;
+			}
+		}
+	}
+	&__text-box {
+		max-width: 100%;
+		padding: 0px 0px 0px 100px;
+		flex: 0 100%;
+		@media (max-width:$md2+px){
+			max-width: 100%;
+			padding: 0px 0px 0px 40px;
+			flex: 0 60%;
+		}
+		@media (max-width:$md3+px){
+			padding: 30px 0px 0px 0px;
+		}
+	}
+}
+.center-main {
+	&__button {
+		@include flexbox();
+		justify-content: center;
+		align-items: center;
+		font-size: 1.8rem;
+		padding: 0px 0px 167px 0px;
+	}
+}
+.text-box {
+	max-width: 100%;
+	&__label {
+		font-size: 1.6rem;
+		color: #4A4A4A;
+		padding: 0px 0px 5px 0px;
+	}
+	&__text {
+		font-size: 2.8rem;
+		color: #4A4A4A;
+		padding: 0px 0px 60px 0px;
+	}
+}
+.simple {
+	&__block {
+		@include flexbox();
+		justify-content: center;
+		align-items: center;
+		padding: 200px 0px 200px 0px;
+		@media (max-width:$md3+px){
+		padding: 150px 0px 150px 0px;
+		flex-direction: column;
+		align-items: flex-start;
+		}
+	}
+	&__text-box {
+		max-width: 100%;
+		padding: 0px 100px 0px 0px;
+		flex: 0 100%;
+		@media (max-width:$md2+px){
+			max-width: 100%;
+			padding: 0px 40px 0px 0px;
+			flex: 0 60%;
+		}
+		@media (max-width:$md3+px){
+			padding: 30px 0px 0px 0px;
+			order: 2;
+		}
+	}
+	&__img-box {
+		max-width: 100%;
+		display: block;
+		height: auto;
+		@media (max-width:$md2+px){
+			max-width: 100%;
+			img{
+				width: 100%;
+			}
+		}
+		@media (max-width:$md3+px){
+			order: 1;
+		}
+	}
+}
+.our-products {
+	&__block {
+		padding: 200px 0px 0px 0px;
+	}
+	&__text-box {
+		padding: 0px 0px 100px 0px;
+		@media (max-width:$md3+px){
+			@include flexbox();
+			justify-content: center;
+		}
+	}
+	&__text {
+		font-size: 3.6rem;
+	}
+	&__gallery-box {
+		@include flexbox();
+		flex-flow: row wrap;
+		padding: 0px 0px 100px 0px;
+	}
+}
+.gallery-box {
+	&__item {
+		height: 100%;
+		width: 33.33%;
+		padding: 0px 0px 55px 0px;
+		@media (max-width:$md2+px){
+			width: 50%;
+		}
+		@media (max-width:$md3+px){
+			width: 100%;
+			padding: 0px 0px 100px 0px;
+		}
+	}
+	&__item-img {
+		max-width: 100%;
+		height: 100%;
+		padding: 0px 0px 35px 0px;
+		img{
+			width: 100%;
+		}
+	}
+	&__text-box {
+		@include flexbox();
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		padding: 20px 0px 0px 0px;
+	}
+	&__item-label {
+		font-size: 1.6rem;
+		padding: 0px 0px 5px 0px;
+	}
+	&__item-text {
+		font-size: 2.8rem;
+	}
+}
+@media (max-width:$md2+px){
+	.hidden{
+		display: none;
+	}
+}
+
 
 //====================================================================================================
 
