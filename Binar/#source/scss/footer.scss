@@ -8,7 +8,7 @@
 		padding: 0px 0px 235px 0px;
 	}
 		&__column {
-			padding: 0px 0px 135px 0px;
+			padding: 0px 0px 130px 0px;
 			
 			&:last-child{
 				padding: 0;
@@ -34,6 +34,12 @@
 			font-size: 2.2rem;
 			padding: 0px 0px 10px 0px;
 		}
+}
+.footer-body {
+	&__img {
+		width: 70px;
+		height: 25px;
+	}
 }
 .footer-flex{
 	@include flexbox();

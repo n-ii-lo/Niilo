@@ -14,10 +14,10 @@
 
 //<Подключаем шрифты>=======================================================================================
 @font-face {
-	font-family: 'OpenSans';
-	src: url("../../fonts/OpenSans.woff") format("woff"); 
+	font-family: 'GT Haptic light';
+	src: url("../../fonts/") format("OTF"); 
 	font-style: normal;
-	font-weight: normal;
+	font-weight: lighter;
 	}
 // @font-face {
 // 	font-family: 'OpenSans';
@@ -126,10 +126,16 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 		font-size: 1.8rem;
 		font-weight: 300;
 		line-height: 23px;
-		@include anim(0.3s,0s);
+		@include anim(0.5s,0s);
 		position: relative;
+		border: none;
+		background-color: transparent;
 		&:hover{
-			color: rgba(151, 151, 151, 0.651);
+			@include skew(-10deg);
+			transform-origin: left bottom;
+			transition: .5s transform ease;
+			will-change: transform;
+			// color: rgba(151, 151, 151, 0.651);
 			&:after{
 				left: 0;
 				width: 100%;
@@ -138,12 +144,12 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 		&:after{
 			content: '';
 			position: absolute;
-			left: 50%;
-			width: 0;
+			left: 100%;
+			width: 0%;
 			height: 1px;
 			background-color:rgba(151, 151, 151, 0.651);
 			bottom: 0;
-			@include anim(0.3s,0s);
+			@include anim(0.5s,0s);
 		}
 	}
 }
@@ -163,6 +169,13 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 			align-items: flex-start;
 		}
 	}
+}
+.bg__material{
+	background: url(img/material__bg.png);                 
+	background-repeat: repeat;
+	position: relative;
+	width: 100vw;
+	
 }
 .block {
 	&__img-box {

@@ -2,6 +2,10 @@
 .header {
 	&__body {
 		height: 100vh;
+		background: url(../img/bg__header-slider__img1.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
 	}
 	&__box {
 		@include flexbox();
@@ -47,7 +51,7 @@
 		height: 10px;
 		cursor: pointer;
 		z-index: 5;
-		span{@include anim(0.3s,0s);top: 10px;left: 0px;position: absolute;width: 100%;height: 1px;background-color: #000;
+		span{@include anim(0.3s,0s);top: 10px;left: 0px;position: absolute;width: 100%;height: 1px;background-color: #fff;
 			&:first-child{top: 0px;}
 			// &:last-child{top: auto;bottom: 0px;}
 		}
@@ -61,20 +65,20 @@
 			display: block;
 		}
 	}
-		
+	
 	&__menu {
 		
 	}
 	&__link {
 		color: #E6E3E1;
-		font-family: "GT Haptik";
+		font-family: "Arial";
 		font-size: 1.8rem;
 		font-weight: 300;
 		letter-spacing: 0;
 		@include anim(0.3s,0s);
 		position: relative;
 		&:hover{
-			color: rgba(151, 151, 151, 0.651);
+			color: rgba(189, 189, 189, 0.822);
 			&:after{
 				left: 0;
 				width: 100%;
@@ -86,7 +90,8 @@
 			left: 50%;
 			width: 0;
 			height: 1px;
-			background-color:rgba(151, 151, 151, 0.651);
+			// background-color:rgba(151, 151, 151, 0.651);
+			background-color:#fff;
 			bottom: 0;
 			@include anim(0.3s,0s);
 		}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
 	<title>Binar</title>
@@ -16,191 +16,196 @@
 
 <body>
 	<div class="wrapper">
-		<header>
-			<div class="header__body">
-				<div class="header__box">
-					<div class="header__column">
-						<a href=""><img class="header__logo" src="img/logo.png" alt="logo"></a>
-					</div>
-
-					<div class="header__column menu-header">
-						<div class="menu-header__icon">
-							<span></span>
-							<span></span>
-							<span></span>
-						</div>
-						<nav class="menu-header__menu">
-							<ul class="menu-header__list">
-								<li><a href="" class="menu-header__link">Projects</a></li>
-								<li><a href="" class="menu-header__link">Products</a></li>
-								<li><a href="" class="menu-header__link">About</a></li>
-								<li><a href="" class="menu-header__link">Contact</a></li>
-							</ul>
-						</nav>
-					</div>
-
-				</div>
+<header>
+	<div class="header__body">
+		<div class="header__box">
+			<div class="header__column">
+				<a href=""><img class="header__logo" src="img/logo.png" alt="Binar logo"></a>
 			</div>
-		</header>
-		<div class="container">
+
+			<div class="header__column menu-header">
+				<div class="menu-header__icon">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+
+				<nav role="navigation" aria-label="Global" class="menu-header__menu">
+					<ul class="menu-header__list">
+						<li><a href="" class="menu-header__link">Projects</a></li>
+						<li><a href="" class="menu-header__link">Products</a></li>
+						<li><a href="" class="menu-header__link">About us</a></li>
+						<li><a href="" class="menu-header__link">Contacts</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+</header>		<div class="container">
 			<main class="maintext__block">
 				<div class="content">
-					<p class="content__text">We're the Binar architecture and design studio.
+					<h1 class="content__text">We're the Binar architecture and design studio.
 						Through personal experience and practice we have made sure that good design is comfortable and
-						aesthetics is not everything.</p>
-					<a href="" class="view__button">View more</a>
+						aesthetics is not everything.</h1>
+					<button class="view__button">Discover more about us</button>
 				</div>
 			</main>
-
-			<main class="material__block">
-				<div class="block__img-box">
-					<img src="img/Y-apartament__img.png" alt="Y-apartament">
-				</div>
-				<div class="block__text-box">
-					<p class="text-box__label">Interior</p>
-					<p class="text-box__text">Y-apartament</p>
-					<div class="block__button">
-						<a href="" class="view__button">View details</a>
+		</div>
+		<main title="Our projects">
+			<div class="bg__material"></div>
+			<div class="container">
+				<main title="Y-apartament" class="material__block">
+					<div class="block__img-box">
+						<img src="img/Y-apartament__img.png" alt="Minimalistic loft interior for hotel">
 					</div>
-				</div>
-			</main>
-
-			<main class="simple__block">
-				<div class="simple__text-box">
-					<p class="text-box__label">Interior</p>
-					<p class="text-box__text">Café</p>
-					<div class="block__button">
-						<a href="" class="view__button">View details</a>
+					<div class="block__text-box">
+						<h5 aria-hidden="true" class="text-box__label">Interior</h5>
+						<h3 aria-hidden="true" class="text-box__text">Y-apartament</h3>
+						<div class="block__button">
+							<button class="view__button">View details</button>
+						</div>
 					</div>
-				</div>
-				<div class="simple__img-box">
-					<img src="img/Cafe__img.png" alt="Cafe">
-				</div>
-			</main>
-
-			<main class="material__block">
-				<div class="block__img-box">
-					<img src="img/Coworking__img.png" alt="Coworking">
-				</div>
-				<div class="block__text-box">
-					<p class="text-box__label">Interior</p>
-					<p class="text-box__text">Coworking</p>
-					<div class="text-box__button">
-						<a href="" class="view__button">View details</a>
-					</div>
-				</div>
-			</main>
-
-			<div class="material__block center-main__button">
-				<a href="" class="view__button">View more projects</a>
+				</main>
 			</div>
+			<div class="container">
+				<main title="Café" class="simple__block">
+					<div class="simple__text-box">
+						<h5 aria-hidden="true" class="text-box__label">Interior</h5>
+						<h3 aria-hidden="true" class="text-box__text">Café</h3>
+						<div class="block__button">
+							<button class="view__button">View details</button>
+						</div>
+					</div>
+					<div class="simple__img-box">
+						<img src="img/Cafe__img.png" alt="Minimalistic loft cafe interior">
+					</div>
+				</main>
+			</div>
+			<div class="bg__material"></div>
+			<div class="container">
+				<main title="Coworking" class="material__block">
+					<div class="block__img-box">
+						<img src="img/Coworking__img.png" alt="Minimalistic loft coworking interior">
+					</div>
+					<div class="block__text-box">
+						<h5 aria-hidden="true" class="text-box__label">Interior</h5>
+						<h3 aria-hidden="true" class="text-box__text">Coworking</h3>
+						<div class="block__button">
+							<button class="view__button">View details</button>
+						</div>
+					</div>
+				</main>
 
+				<div class="material__block center-main__button">
+					<button class="view__button">View all projects</button>
+				</div>
+			</div>
+		</main>
+		<div class="container">
 			<main class="our-products__block">
 				<div class="our-products__text-box">
-					<p class="our-products__text">Our products</p>
+					<h1 class="our-products__text">Our products</h1>
 				</div>
 				<div class="our-products__gallery-box">
 					<div class="gallery-box__item">
 						<div class="gallery-box__item-img">
-							<img src="img/gallery-item 1.png" alt="">
+							<img src="img/gallery-item 1.png" alt="White chair with wooden armchairs">
 						</div>
 						<div class="gallery-box__text-box">
-							<p class="gallery-box__item-label">Product</p>
-							<p class="gallery-box__item-text">Stenklöver</p>
+							<h5 aria-hidden="true" class="gallery-box__item-label">Product</h5>
+							<h3 class="gallery-box__item-text">Stenklöver</h3>
 						</div>
 					</div>
 
 
 					<div class="gallery-box__item">
 						<div class="gallery-box__item-img">
-							<img src="img/gallery-item 2.png" alt="">
+							<img src="img/gallery-item 2.png" alt="White plastic chair">
 						</div>
 						<div class="gallery-box__text-box">
-							<p class="gallery-box__item-label">Product</p>
-							<p class="gallery-box__item-text">Sladda</p>
+							<h5 aria-hidden="true" class="gallery-box__item-label">Product</h5>
+							<h3 class="gallery-box__item-text">Sladda</h3>
 						</div>
 					</div>
 
 					<div class="gallery-box__item">
 						<div class="gallery-box__item-img">
-							<img src="img/gallery-item 3.png" alt="">
+							<img src="img/gallery-item 3.png" alt="Beige small chair">
 						</div>
 						<div class="gallery-box__text-box">
-							<p class="gallery-box__item-label">Product</p>
-							<p class="gallery-box__item-text">Fartyg</p>
+							<h5 aria-hidden="true" class="gallery-box__item-label">Product</h5>
+							<h3 class="gallery-box__item-text">Fartyg</h3>
 						</div>
 					</div>
 
 					<div class="gallery-box__item">
 						<div class="gallery-box__item-img">
-							<img src="img/gallery-item 4.png" alt="">
+							<img src="img/gallery-item 4.png" alt="White vase">
 						</div>
 						<div class="gallery-box__text-box">
-							<p class="gallery-box__item-label">Product</p>
-							<p class="gallery-box__item-text">Ektorp</p>
+							<h5 aria-hidden="true" class="gallery-box__item-label">Product</h5>
+							<h3 class="gallery-box__item-text">Ektorp</h3>
 						</div>
 					</div>
 
 					<div class="gallery-box__item hidden">
 						<div class="gallery-box__item-img">
-							<img src="img/gallery-item 5.png" alt="">
+							<img src="img/gallery-item 5.png" alt="Olive vase">
 						</div>
 						<div class="gallery-box__text-box">
-							<p class="gallery-box__item-label">Product</p>
-							<p class="gallery-box__item-text">Ödmjuk</p>
+							<h5 aria-hidden="true" class="gallery-box__item-label">Product</h5>
+							<h3 class="gallery-box__item-text">Ödmjuk</h3>
 						</div>
 					</div>
 
 					<div class="gallery-box__item hidden">
 						<div class="gallery-box__item-img">
-							<img src="img/gallery-item 4.png" alt="">
+							<img src="img/gallery-item 4.png" alt="White vase">
 						</div>
 						<div class="gallery-box__text-box">
-							<p class="gallery-box__item-label">Product</p>
-							<p class="gallery-box__item-text">Kallax</p>
+							<h5 aria-hidden="true" class="gallery-box__item-label">Product</h5>
+							<h3 class="gallery-box__item-text">Kallax</h3>
 						</div>
 					</div>
 				</div>
-				<div class="center-main__button">
-					<a href="" class="view__button">View more products</a>
+				<div class="material__block center-main__button">
+					<button class="view__button">View all products</button>
 				</div>
 			</main>
-
-
-
 		</div>
-		<footer>
-			<div class='container'>
-				<div class="footer-body">
-					<div class="footer-body__column">
-						<p class="footer-body__label">Do you have project for us?</p>
-						<div class="footer-body__button"><a href="" class="view__button">Get in touch</a></div>
-					</div>
-					<div class="footer-body__column footer-flex">
-						<div class="footer-body__contacts">
-							<img src="" alt="" />
-							<p class="footer-body__text">Pushkinskaya №76</p>
-							<p class="footer-body__text">Odessa, Ukraine</p>
-						</div>
-						<div class="footer-body__contacts">
-							<p class="footer-body__text">Instagram</p>
-							<p class="footer-body__text">Facebook</p>
-						</div>
-						<div class="footer-body__contacts">
-							<p class="footer-body__text">binar.in.touch@gmail.com</p>
-							<p class="footer-body__text">+38 099 401 85 27</p>
-							<p class="footer-body__text">+38 093 830 19 47</p>
-						</div>
-					</div>
+<footer title="footer">
+	<div class='container'>
+		<div class="footer-body">
+			<div class="footer-body__column">
+				<h1 class="footer-body__label">Do you have project for us?</h1>
+				<div class="footer-body__button"><button class="view__button">Get in touch</button></div>
+			</div>
+			<div class="footer-body__img">
+				<img src="" alt="" />
+			</div>
+			<div class="footer-body__column footer-flex">
+				<div title="Our location" class="footer-body__contacts">
+					<p class="footer-body__text">Odessa, Ukraine</p>
+					<p class="footer-body__text">Pushkinskaya №76</p>
+				</div>
+				<div title="We in social networks" class="footer-body__contacts">
+					<p class="footer-body__text"><a href="" target="_blank">Instagram</a></p>
+					<p class="footer-body__text"><a href="" target="_blank">Facebook</a></p>
+				</div>
+				<div title="our contacts" class="footer-body__contacts">
+					<p class="footer-body__text"><a href="" target="_blank">binar.in.touch@gmail.com</a></p>
+					<p class="footer-body__text">+38 099 401 85 27</p>
+					<p class="footer-body__text">+38 093 830 19 47</p>
 				</div>
 			</div>
-		</footer>
+		</div>
 	</div>
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-	<!-- <script src="https://code.jquery.com/jquery-migrate-3.0.1.min.js"></script> -->
-	<script src="js/vendors.js"></script>
-	<script src="js/main.js"></script>
-	<script src="js/custom.js"></script>
+</footer>	</div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-migrate-3.0.1.min.js"></script> -->
+<script src="js/vendors.js"></script>
+<script src="js/main.js"></script>
+<script src="js/custom.js" ></script>
 </body>
 
 </html>
