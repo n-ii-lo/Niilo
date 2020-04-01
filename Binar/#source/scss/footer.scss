@@ -52,5 +52,27 @@
 
 	}
 }
+.footer__link{
+		color: rgb(0, 0, 0);
+		@include anim(0.3s,0s);
+		position: relative;
+		&:hover{
+			color: rgba(100, 100, 100, 0.651);
+			&:after{
+				left: 0;
+				width: 100%;
+			}
+		}
+		&:after{
+			content: '';
+			position: absolute;
+			left: 50%;
+			width: 0%;
+			height: 1px;
+			background-color:rgba(0, 0, 0, 0.651);
+			bottom: -1px;
+			@include anim(0.3s,0s);
+		}
+}
 //====================================================================================================
 
