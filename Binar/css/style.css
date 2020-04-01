@@ -1,9 +1,21 @@
 @charset "UTF-8";
 @font-face {
-  font-family: "GT Haptic light";
-  src: url("../../fonts/") format("OTF");
+  font-family: "GT Walsheim Pro";
+  src: local("GT Walsheim Pro Regular"), local("GTWalsheimProRegular"), url(../../fonts/GTWalsheimProRegular.woff2) format("woff2"), url(../../fonts/GTWalsheimProRegular.woff) format("woff"), url(../../fonts/GTWalsheimProRegular.ttf) format("truetype");
+  font-weight: 400;
   font-style: normal;
-  font-weight: lighter;
+}
+@font-face {
+  font-family: "GT Walsheim Pro";
+  src: local("GT Walsheim Pro Bold"), local("GTWalsheimProBold"), url(../../fonts/GTWalsheimProBold.woff2) format("woff2"), url(../../fonts/GTWalsheimProBold.woff) format("woff"), url(../../fonts/GTWalsheimProBold.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GT Walsheim Pro";
+  src: local("GT Walsheim Pro Light"), local("GTWalsheimProLight"), url(../../fonts/GTWalsheimProLight.OTF) format("OpenType");
+  font-weight: 300;
+  font-style: normal;
 }
 * {
   padding: 0px;
@@ -42,7 +54,7 @@ html, body {
 body {
   font-size: 100%;
   line-height: 1;
-  font-family: "OpenSans";
+  font-family: "GT Walsheim Pro";
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -59,7 +71,7 @@ body.lock {
 }
 
 input, button, textarea {
-  font-family: "OpenSans";
+  font-family: "GT Walsheim Pro";
 }
 
 input::-ms-clear {
@@ -127,10 +139,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .header__body {
   height: 100vh;
-  background: url(../img/bg__header-slider__img1.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
 }
 .header__box {
   display: -webkit-box;
@@ -231,7 +239,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .menu-header__link {
   color: #E6E3E1;
-  font-family: "Arial";
   font-size: 1.8rem;
   font-weight: 300;
   letter-spacing: 0;
@@ -241,7 +248,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
 }
 .menu-header__link:hover {
-  color: rgba(189, 189, 189, 0.822);
+  color: rgba(206, 206, 206, 0.89);
 }
 .menu-header__link:hover:after {
   left: 0;
@@ -254,7 +261,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 0;
   height: 1px;
   background-color: #fff;
-  bottom: 0;
+  bottom: -3px;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
@@ -286,6 +293,29 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* Слайдер */
+.slick-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Слайдер запущен */
+/* Слайдер с точками */
+/* Ограничивающая оболочка */
+/* Лента слайдов */
+/* Слайд */
+/* Слайд активный (показывается) */
+/* Слайд основной */
+/* Слайд по центру */
+/* Клонированный слайд */
+/* Стрелка */
+/* Стрелка влево */
+/* Стрелка вправо */
+/* Стрелка не активная */
+/* Точки (булиты) */
+/* Активная точка */
+/* Элемент точки */
 .footer-body {
   padding: 0px 0px 200px 0px;
 }
@@ -455,7 +485,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bg__material {
-  background: url(img/material__bg.png);
+  background: url(../../img/material__bg.png);
   background-repeat: repeat;
   position: relative;
   width: 100vw;
@@ -510,6 +540,11 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.8rem;
   padding: 0px 0px 167px 0px;
 }
+@media (max-width: 767.98px) {
+  .center-main__button {
+    padding: 0px 0px 105px 0px;
+  }
+}
 
 .text-box {
   max-width: 100%;
@@ -517,7 +552,7 @@ h1, h2, h3, h4, h5, h6 {
 .text-box__label {
   font-size: 1.6rem;
   color: #4A4A4A;
-  padding: 0px 0px 5px 0px;
+  padding: 0px 0px 7px 0px;
 }
 .text-box__text {
   font-size: 2.8rem;
