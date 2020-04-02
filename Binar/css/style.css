@@ -1,18 +1,6 @@
 @charset "UTF-8";
 @font-face {
   font-family: "GT Walsheim Pro";
-  src: local("GT Walsheim Pro Regular"), local("GTWalsheimProRegular"), url(../../fonts/GTWalsheimProRegular.woff2) format("woff2"), url(../../fonts/GTWalsheimProRegular.woff) format("woff"), url(../../fonts/GTWalsheimProRegular.ttf) format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "GT Walsheim Pro";
-  src: local("GT Walsheim Pro Bold"), local("GTWalsheimProBold"), url(../../fonts/GTWalsheimProBold.woff2) format("woff2"), url(../../fonts/GTWalsheimProBold.woff) format("woff"), url(../../fonts/GTWalsheimProBold.ttf) format("truetype");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: "GT Walsheim Pro";
   src: local("GT Walsheim Pro Light"), local("GTWalsheimProLight"), url(../../fonts/GTWalsheimProLight.OTF) format("OpenType");
   font-weight: 300;
   font-style: normal;
@@ -136,6 +124,12 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0 25px;
   }
 }
+@media (max-width: 374.98px) {
+  .container {
+    max-width: 370px;
+    padding: 0 25px;
+  }
+}
 
 .header__body {
   position: absolute;
@@ -180,6 +174,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 992.98px) {
   .header__logo {
     width: 102px;
+    display: inline-block;
   }
   .header__logo img {
     max-width: 100%;
@@ -190,7 +185,7 @@ h1, h2, h3, h4, h5, h6 {
 .menu-burger {
   display: none;
   position: absolute;
-  top: 60px;
+  top: 50px;
   right: 50px;
   width: 18px;
   height: 10px;
@@ -235,12 +230,24 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0;
   -ms-flex-item-align: end;
       align-self: flex-end;
-  padding: 0 0 0 30px;
+  padding: 0 0 0 50px;
 }
 @media (max-width: 992.98px) {
   .menu-header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 0;
-    display: none;
+    background-color: #E6E3E1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
   }
 }
 .menu-header__link {
@@ -253,8 +260,14 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.3s ease 0s;
   position: relative;
 }
+@media (max-width: 992.98px) {
+  .menu-header__link {
+    color: #4A4A4A;
+    font-size: 4rem;
+  }
+}
 .menu-header__link:hover {
-  color: rgba(206, 206, 206, 0.89);
+  color: #adadad;
 }
 .menu-header__link:hover:after {
   left: 0;
@@ -272,6 +285,16 @@ h1, h2, h3, h4, h5, h6 {
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
+@media (max-width: 992.98px) {
+  .menu-header__link:after {
+    background-color: black;
+    left: 0;
+    width: 0;
+  }
+}
+.menu-header__logo-box {
+  display: none;
+}
 .menu-header__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -281,14 +304,21 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 992.98px) {
   .menu-header__list {
     display: block;
+    padding: 50px 50px 0px 50px;
+  }
+}
+@media (max-width: 767.98px) {
+  .menu-header__list {
+    padding: 30px 25px 0px 25px;
   }
 }
 .menu-header__list li {
-  padding: 0 0 0 30px;
+  padding: 0 30px 0 0;
 }
 @media (max-width: 992.98px) {
   .menu-header__list li {
-    margin: 0px 0px 10px 0px;
+    margin: 0px 0px 20px 0px;
+    padding: 0;
   }
 }
 
@@ -299,17 +329,33 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 
+.parallax--bg {
+  -webkit-transition: 0ms;
+  -o-transition: 0ms;
+  transition: 0ms;
+}
+
+.menu__footer-body {
+  display: none;
+}
+@media (max-width: 992.98px) {
+  .menu__footer-body {
+    display: block;
+    padding: 0px 50px 0px 50px;
+  }
+}
+@media (max-width: 767.98px) {
+  .menu__footer-body {
+    padding: 0px 25px 0px 25px;
+  }
+}
+
 .footer-body {
   padding: 0px 0px 200px 0px;
 }
 @media (max-width: 992.98px) {
   .footer-body {
     padding: 0px 0px 120px 0px;
-  }
-}
-@media (max-width: 767.98px) {
-  .footer-body {
-    padding: 0px 0px 235px 0px;
   }
 }
 .footer-body__column {
@@ -391,7 +437,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 0%;
   height: 1px;
   background-color: rgba(0, 0, 0, 0.651);
-  bottom: -1px;
+  bottom: -5px;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
@@ -499,6 +545,8 @@ h1, h2, h3, h4, h5, h6 {
   background-repeat: repeat;
   position: relative;
   width: 100vw;
+  -webkit-box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
 }
 
 .block__img-box {

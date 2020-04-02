@@ -13,19 +13,19 @@
 //<ШРИФТЫ>===============================================================================================
 
 //<Подключаем шрифты>=======================================================================================
-@font-face {
-	font-family: "GT Walsheim Pro";
-	src: local("GT Walsheim Pro Regular"),local("GTWalsheimProRegular"),url(../../fonts/GTWalsheimProRegular.woff2) format("woff2"),url(../../fonts/GTWalsheimProRegular.woff) format("woff"),url(../../fonts/GTWalsheimProRegular.ttf) format("truetype");
-	font-weight: 400;
-	font-style: normal
- }
+// @font-face {
+// 	font-family: "GT Walsheim Pro";
+// 	src: local("GT Walsheim Pro Regular"),local("GTWalsheimProRegular"),url(../../fonts/GTWalsheimProRegular.woff2) format("woff2"),url(../../fonts/GTWalsheimProRegular.woff) format("woff"),url(../../fonts/GTWalsheimProRegular.ttf) format("truetype");
+// 	font-weight: 400;
+// 	font-style: normal
+//  }
  
- @font-face {
-	font-family: "GT Walsheim Pro";
-	src: local("GT Walsheim Pro Bold"),local("GTWalsheimProBold"),url(../../fonts/GTWalsheimProBold.woff2) format("woff2"),url(../../fonts/GTWalsheimProBold.woff) format("woff"),url(../../fonts/GTWalsheimProBold.ttf) format("truetype");
-	font-weight: 700;
-	font-style: normal
- }
+//  @font-face {
+// 	font-family: "GT Walsheim Pro";
+// 	src: local("GT Walsheim Pro Bold"),local("GTWalsheimProBold"),url(../../fonts/GTWalsheimProBold.woff2) format("woff2"),url(../../fonts/GTWalsheimProBold.woff) format("woff"),url(../../fonts/GTWalsheimProBold.ttf) format("truetype");
+// 	font-weight: 700;
+// 	font-style: normal
+//  }
 
  @font-face {
 	font-family: "GT Walsheim Pro";
@@ -48,7 +48,7 @@ $mw:940;
 $md1:$mw+15;
 $md2:992.98; 
 $md3:767.98; 
-$md4:479.98;
+$md4:374.98;
 //</ПЕРЕМЕННЫЕ>===========================================================================================================
 
 //<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
@@ -89,6 +89,7 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 	@media (max-width:$md1+px){max-width: 992px;padding:0 25px;}
 	@media (max-width:$md2+px){max-width: 768px;padding:0 80px;}
 	@media (max-width:$md3+px){max-width: 576px;padding:0 25px;}
+	@media (max-width:$md4+px){max-width: 370px;padding:0 25px;}
 }
 //</ОСНОВНАЯ СЕТКА>===========================================================================================================
 
@@ -176,6 +177,7 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 	background-repeat: repeat;
 	position: relative;
 	width: 100vw;
+	box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
 }
 .block {
 	&__img-box {
