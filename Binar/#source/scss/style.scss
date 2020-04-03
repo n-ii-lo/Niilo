@@ -29,7 +29,7 @@
 
  @font-face {
 	font-family: "GT Walsheim Pro";
-	src: local("GT Walsheim Pro Light"),local("GTWalsheimProLight"),url(../../fonts/GTWalsheimProLight.OTF) format("OpenType");
+	src: local("GT Walsheim Pro Light"),local("GTWalsheimProLight"),url(../fonts/GTWalsheimProLight.OTF) format("OpenType");
 	font-weight: 300;
 	font-style: normal
  }
@@ -173,7 +173,7 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 	}
 }
 .bg__material{
-	background: url(../../img/material__bg.png);
+	background: url(../img/material__bg.png);
 	background-repeat: repeat;
 	position: relative;
 	width: 100vw;

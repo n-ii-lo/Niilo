@@ -32,6 +32,11 @@
 		display: inline-block;
 		width: 102px;
 		img{max-width: 100%;}
+		transition: .5s ease-in-out;
+		&:hover{
+			opacity: 0.3;
+			transition: .3s ease-in-out;
+		}
 		@media (max-width:$md2+px){
 			width: 102px;
 			display: inline-block;
@@ -73,7 +78,7 @@
 	align-self: flex-end;
 	padding: 0 0 0 50px;
 	@media (max-width:$md2+px){
-		// display: none;
+		display: none;
 		flex-direction: column;
 		justify-content: space-between;
 		padding: 0;
@@ -96,7 +101,7 @@
 			font-size: 4rem;
 		}
 		&:hover{
-			color: rgb(173, 173, 173);
+			color: rgb(158, 158, 158);
 			&:after{
 				left: 0;
 				width: 100%;
@@ -164,6 +169,58 @@
 		}
 	}
 }
+.arrow{
+	width: 39px;
+	height: 20px;
+	margin: auto;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	text-align: center;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 60px;
+	opacity: 0.5;
+	transition: (ease 1s);
+	animation: bouncey 1.5s linear infinite;
+	&:hover{
+		opacity: 1;
+	}
+	ul{
+		list-style: none;
+	}
+	li{
+		width: 24px;
+		height: 4px;
+		background: white;
+			&:nth-child(1){
+			left: 0;
+			top: 0;
+			position: absolute;
+			transform: (rotate(45deg));
+			border-radius: (5px 0 0 5px);
+			}
+		&:nth-child(2){
+			left: 14px;
+			position: absolute;
+			border-radius: (0 5px 5px 0);
+			top: 0;
+			transform: (rotate(-45deg));
+		}
+	}
+	@keyframes bouncey{
+		0%{
+			transform: (translateY(0));
+		}
+		100%{
+			transform: (translateY(0));
+		}
+		50%{
+			transform: (translateY(10px));
+		}
+	}
+}
+
 
 
 
