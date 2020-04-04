@@ -55,39 +55,57 @@
 	width:18px;
 	height: 10px;
 	cursor: pointer;
-	z-index: 5;
-	span{@include anim(0.3s,0s);top: 10px;left: 0px;position: absolute;width: 100%;height: 1px;background-color: #fff;
-		&:first-child{top: 0px;}
-		// &:last-child{top: auto;bottom: 0px;}
-		@media (max-width:$md2+px){
-		//  background-color: black;
-		}
-	}
-	&.active{
-		span{@include scale(0);
-			&:first-child{@include rotate(-45deg);top: 8px;}
-			// &:last-child{@include rotate(45deg);bottom: 8px;}
-		}
-	}
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
 	@media (max-width:$md2+px){
 		display: block;
 	}
 }
+.cross{
+	display: none;
+	@media (max-width:$md2+px){
+		display: block;
+		position: absolute;
+		top: 35px;
+		right: 40px;
+		width: 40px;
+		height: 40px;
+		cursor: pointer;
+		background-color:#E6E3E1;
+		&:after,&:before{
+			display: block;
+			content: '';
+			width: 18px;
+			height: 1px;
+			background: #C1C1C1;
+			position: absolute;
+			top: 50%;
+			left: 50%; 
+		}
+		&:after{
+			transform: translate(-50%, -50%) rotate(45deg);
+		}
+		&:before{
+			transform: translate(-50%, -50%) rotate(-45deg);
+		}
+	}
+	
+}
+
 .menu-header {
 	@include flexbox();
 	align-self: flex-end;
 	padding: 0 0 0 50px;
 	@media (max-width:$md2+px){
-		display: none;
 		flex-direction: column;
 		justify-content: space-between;
 		padding: 0;
 		background-color:#E6E3E1;
-		position: absolute;
+		position: fixed;
 		top: 0;
 		left: 0;
 		width: 100%;
-		height: 100vh;
+		height: 100%;
 	}
 	&__link {
 		color: #E6E3E1;
@@ -125,7 +143,15 @@
 		}
 	}
 	&__logo-box{
-		display: none;
+		@media (max-width:$md2+px){
+			display: block;
+			width: 100%;
+			height: 115px;
+			background-color: white;
+		}
+	}
+	&__logo{
+
 	}
 	&__list {
 		@include flexbox();
