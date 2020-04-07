@@ -11,8 +11,9 @@
 		}
 	}
 	&__label {
-		font-size: 3.6rem;
+		font-size: 4rem;
 		padding: 0px 0px 20px 0px;
+		color: #4A4A4A;
 	}
 	&__contacts {
 		&:last-child{
@@ -26,7 +27,7 @@
 		}
 	}
 	&__text {
-			font-size: 2.2rem;
+			font-size: 2.5rem;
 			padding: 0px 0px 10px 0px;
 			color: #4A4A4A;
 	}
@@ -35,7 +36,7 @@
 		height: 25px;
 	}
 	&__text-link{
-		font-size: 2.2rem;
+		font-size: 2.5rem;
 		padding: 0px 0px 10px 0px;
 		color: #4A4A4A;
 		@include anim(0.3s,0s);
@@ -61,15 +62,15 @@
 .footer__link{
 		color: #4A4A4A;
 		position: relative;
-		// &:after{
-		// 	content: '';
-		// 	position: absolute;
-		// 	left: 0;
-		// 	width: 100%;
-		// 	height: 1px;
-		// 	background-color:rgba(151, 151, 151, 0.651);
-		// 	bottom: -3px;
-		// }
+		&:after{
+			content: '';
+			position: absolute;
+			left: 0;
+			width: 100%;
+			height: 1px;
+			background-color:#4A4A4A;
+			bottom: -5px;
+		}
 }
 //====================================================================================================
 

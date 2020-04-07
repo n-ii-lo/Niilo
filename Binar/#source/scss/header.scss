@@ -30,8 +30,9 @@
 		width: 102px;
 		img{max-width: 100%;}
 		transition: .5s ease-in-out;
+		opacity: 1;
 		&:hover{
-			opacity: 0.3;
+			opacity: 0.5;
 			transition: .3s ease-in-out;
 		}
 		@media (max-width:$md2+px){
@@ -305,7 +306,6 @@
 		position: relative;
 		@include anim(0.3s,0s);
 		&:hover{
-			color: rgba(100, 100, 100, 0.651);
 			&:after{
 				left: 0;
 				width: 100%;
@@ -378,7 +378,6 @@
 		position: relative;
 		@include anim(0.3s,0s);
 		&:hover{
-			color: rgba(100, 100, 100, 0.651);
 			&:after{
 				left: 0;
 				width: 100%;
