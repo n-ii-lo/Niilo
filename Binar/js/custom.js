@@ -43,11 +43,11 @@ function parallax() {
 })();
 //======================================================================================
 $('.menu-burger').on('click', function () {
-	$('.menu-header').fadeIn('fast');
+	$('#mobile-menu').fadeIn('fast');
 });
 
 $('.cross').on('click', function () {
-	$('.menu-header').fadeOut('fast');
+	$('#mobile-menu').fadeOut('fast');
 });
 //========================================================================================
 $(window).scroll(function () {
