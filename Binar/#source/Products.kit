@@ -8,8 +8,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/custom.css">
-	<link rel="shortcut icon" href="favicon.ico">
-	<link rel="stylesheet" href="slick/slick.css">
+	<!-- <link rel="shortcut icon" href="favicon.ico"> -->
 	<!-- <meta name="robots" content="noindex, nofollow" /> -->
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
@@ -18,69 +17,7 @@
 <body>
 	<div class="wrapper">
 
-		<!-- @import "header.html" -->
-		<div class="container">
-			<main class="maintext__block">
-				<div class="content">
-					<h1 class="content__text">Привет! <br> Мы — студия архитектуры и дизайна Binar. <br> На личном опыте и
-						практике мы
-						убедились, что хороший дизайн — это удобный дизайн, а эстетика — это ещё не всё.</h1>
-					<button class="view__button">Узнайте больше о нас</button>
-				</div>
-			</main>
-		</div>
-		<main title="Our projects">
-			<div class="bg__material parallax--bg">
-				<div class="container">
-					<main title="Y-apartament" class="material__block">
-						<div class="material__img-box">
-							<img src="img/Y-apartament__img.png" alt="Minimalistic loft interior for hotel">
-						</div>
-						<div class="material__text-box">
-							<h5 aria-hidden="true" class="text-box__label">Интерьер</h5>
-							<h3 aria-hidden="true" class="text-box__text">Y апартаменты</h3>
-							<div class="block__button">
-								<button class="view__button">Увидеть больше</button>
-							</div>
-						</div>
-					</main>
-				</div>
-			</div>
-			<div class="container">
-				<main title="Café" class="simple__block">
-					<div class="simple__text-box">
-						<h5 aria-hidden="true" class="text-box__label">Интерьер</h5>
-						<h3 aria-hidden="true" class="text-box__text">Кафé</h3>
-						<div class="block__button">
-							<button class="view__button">Увидеть больше</button>
-						</div>
-					</div>
-					<div class="simple__img-box">
-						<img src="img/Cafe__img.png" alt="Minimalistic loft cafe interior">
-					</div>
-				</main>
-			</div>
-			<div class="bg__material parallax--bg">
-				<div class="container">
-					<main title="Coworking" class="material__block">
-						<div class="material__img-box">
-							<img src="img/Coworking__img.png" alt="Minimalistic loft coworking interior">
-						</div>
-						<div class="material__text-box">
-							<h5 aria-hidden="true" class="text-box__label">Интерьер</h5>
-							<h3 aria-hidden="true" class="text-box__text">Коворкинг</h3>
-							<div class="block__button">
-								<button class="view__button">Увидеть больше</button>
-							</div>
-						</div>
-					</main>
-
-					<div class="material__block center-main__button">
-						<button class="view__button">Увидеть все проекты</button>
-					</div>
-				</div>
-			</div>
-		</main>
+		<!-- @import "pages-header.html" -->
 		<div class="container">
 			<main class="our-products__block">
 				<div class="our-products__text-box">
@@ -89,7 +26,7 @@
 						декоративных полос, которые делают кафе более аутентичным.</p>
 				</div>
 				<div class="our-products__gallery-box">
-					<div class="gallery-box__item">
+					<div class="gallery-box__item hidden-mobile">
 						<div class="gallery-box__item-img">
 							<img src="img/gallery-item 1.png" alt="White chair with wooden armchairs">
 						</div>
@@ -102,7 +39,7 @@
 					</div>
 
 
-					<div class="gallery-box__item">
+					<div class="gallery-box__item hidden-mobile">
 						<div class="gallery-box__item-img">
 							<img src="img/gallery-item 2.png" alt="White plastic chair">
 						</div>
@@ -114,7 +51,7 @@
 						</div>
 					</div>
 
-					<div class="gallery-box__item">
+					<div class="gallery-box__item hidden-mobile">
 						<div class="gallery-box__item-img">
 							<img src="img/gallery-item 3.png" alt="Beige small chair">
 						</div>
@@ -138,7 +75,7 @@
 						</div>
 					</div>
 
-					<div class="gallery-box__item hidden-tablet">
+					<div class="gallery-box__item hidden-mobile">
 						<div class="gallery-box__item-img">
 							<img src="img/gallery-item 5.png" alt="Olive vase">
 						</div>
@@ -150,7 +87,7 @@
 						</div>
 					</div>
 
-					<div class="gallery-box__item hidden-tablet">
+					<div class="gallery-box__item hidden-tablet hidden-mobile">
 						<div class="gallery-box__item-img">
 							<img src="img/gallery-item 4.png" alt="White vase">
 						</div>
@@ -161,10 +98,45 @@
 							</button>
 						</div>
 					</div>
+
+					<div class="gallery-box__item">
+						<div class="gallery-box__item-img">
+							<img src="img/gallery-item 4.png" alt="White vase">
+						</div>
+						<div class="gallery-box__text-box">
+							<h5 aria-hidden="true" class="gallery-box__item-label">Продукт</h5>
+							<button class="items__button">
+								<h3 class="gallery-box__item-text">Докста</h3>
+							</button>
+						</div>
+					</div>
+
+					<div class="gallery-box__item">
+						<div class="gallery-box__item-img">
+							<img src="img/gallery-item 4.png" alt="White vase">
+						</div>
+						<div class="gallery-box__text-box">
+							<h5 aria-hidden="true" class="gallery-box__item-label">Продукт</h5>
+							<button class="items__button">
+								<h3 class="gallery-box__item-text">Поäнг</h3>
+							</button>
+						</div>
+					</div>
+
+					<div class="gallery-box__item">
+						<div class="gallery-box__item-img">
+							<img src="img/gallery-item 4.png" alt="White vase">
+						</div>
+						<div class="gallery-box__text-box">
+							<h5 aria-hidden="true" class="gallery-box__item-label">Продукт</h5>
+							<button class="items__button">
+								<h3 class="gallery-box__item-text">Кнутсторп</h3>
+							</button>
+						</div>
+					</div>
+
 				</div>
-				<div class="material__block center-main__button">
-					<button class="view__button">Увидеть все продукты</button>
-				</div>
+
 			</main>
 		</div>
 		<!-- @import "footer.html" -->
