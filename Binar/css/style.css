@@ -1,6 +1,12 @@
 @font-face {
   font-family: "GT Walsheim Pro";
-  src: local("GT Walsheim Pro Light"), local("GTWalsheimProLight"), url(../fonts/GTWalsheimProLight.OTF) format("OpenType");
+  src: local("GT Walsheim Pro Regular"), local("GTWalsheimProRegular"), url(../../fonts/GTWalsheimProRegular.woff2) format("woff2"), url(../../fonts/GTWalsheimProRegular.woff) format("woff"), url(../../fonts/GTWalsheimProRegular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GT Walsheim Pro";
+  src: local "GT Walsheim Pro Light", local("GTWalsheimProLight"), url(../../fonts/GTWalsheimProLight.OTF) format("OpenType");
   font-weight: 300;
   font-style: normal;
 }
@@ -809,6 +815,7 @@ h1, h2, h3, h4, h5, h6 {
 .footer-body__img {
   width: 70px;
   height: 25px;
+  color: #4A4A4A;
   margin: 0px 0px 10px 0px;
   -webkit-transition: 0.5s ease-in-out;
   -o-transition: 0.5s ease-in-out;

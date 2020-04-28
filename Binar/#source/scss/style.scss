@@ -13,12 +13,12 @@
 //<ШРИФТЫ>===============================================================================================
 
 //<Подключаем шрифты>=======================================================================================
-// @font-face {
-// 	font-family: "GT Walsheim Pro";
-// 	src: local("GT Walsheim Pro Regular"),local("GTWalsheimProRegular"),url(../../fonts/GTWalsheimProRegular.woff2) format("woff2"),url(../../fonts/GTWalsheimProRegular.woff) format("woff"),url(../../fonts/GTWalsheimProRegular.ttf) format("truetype");
-// 	font-weight: 400;
-// 	font-style: normal
-//  }
+@font-face {
+	font-family: "GT Walsheim Pro";
+	src: local("GT Walsheim Pro Regular"),local("GTWalsheimProRegular"),url(../../fonts/GTWalsheimProRegular.woff2) format("woff2"),url(../../fonts/GTWalsheimProRegular.woff) format("woff"),url(../../fonts/GTWalsheimProRegular.ttf) format("truetype");
+	font-weight: 400;
+	font-style: normal;
+ }
  
 //  @font-face {
 // 	font-family: "GT Walsheim Pro";
@@ -29,9 +29,9 @@
 
  @font-face {
 	font-family: "GT Walsheim Pro";
-	src: local("GT Walsheim Pro Light"),local("GTWalsheimProLight"),url(../fonts/GTWalsheimProLight.OTF) format("OpenType");
+	src: local ("GT Walsheim Pro Light"),local("GTWalsheimProLight"),url(../../fonts/GTWalsheimProLight.OTF) format("OpenType");
 	font-weight: 300;
-	font-style: normal
+	font-style: normal;
  }
 //</Подключаем шрифты>=======================================================================================
 
@@ -824,7 +824,6 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 		}
 	}
 }
-
 //</CAFE>====================================================================================================
 //</ОСНОВНОЙ БЛОК>====================================================================================================
 
