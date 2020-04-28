@@ -690,75 +690,15 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 //</CONTACTS>====================================================================================================
 //<CAFE>====================================================================================================
 .cafe {
-	&__block {
-		padding: 200px 0px 0px 0px;
-	}
-	&__img-box--big {
-		padding: 0px 0px 50px 0px;
-		img{
-			display: block;
-			max-width: 100%;
-			height: auto;
-		}
-	}
-	&__details-text {
-		padding: 0px 0px 100px 0px;
-	}
 	&__main-text{
 		color: #595959;
 		font-size: 2.5rem;
 		line-height: 36px;
-	}
-}
-.details-text {
-	&__main-headling {
-		padding: 0px 0px 95px 0px;
-		color: #4A4A4A;
-		font-size: 4rem;
-		line-height: 50px;
-	}
-	&__box {
-		@include flexbox();
-		flex-direction: column;
-	}
-	&__column {
-		@include flexbox();
-		justify-content: space-between;
-	}
-	&__secondary-headling {
-		font-size: 1.8rem;
-		color: #959595;
-		line-height: 27px;
-		flex: 1;
-		@media (max-width:$md3+px){
-			flex: 1 0 50%;
-		}
-	}
-	&__text {
-		font-size: 1.8rem;
-		color: #4A4A4A;
-		line-height: 27px;
-		text-align: left;
-	}
-	&__text--flex-box{
-		@include flexbox();
-		justify-content: flex-start;
-		flex: 4;
-		padding: 0px 0px 0px 20px;
-		@media (max-width:$md2+px){
-			flex: 3;
-		}
-		@media (max-width:$md3+px){
-			justify-content: flex-start;
-			flex: 5;
-			padding: 0px 0px 0px 0px;
-		}
+		padding: 180px 0px 180px 0px;
 	}
 }
 .cafe-visual {
-	&__block {
-		padding: 180px 0px 0px 0px;
-	}
+	&__block {}
 	&__img-box {
 		padding: 0px 0px 200px 0px;
 		&:last-child{
@@ -825,5 +765,66 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 	}
 }
 //</CAFE>====================================================================================================
+//<PROJECT-PAGE GENERAL>====================================================================================================
+.project {
+	padding: 200px 0px 0px 0px;
+	&__img-box--big {
+		padding: 0px 0px 50px 0px;
+		img{
+			display: block;
+			max-width: 100%;
+			height: auto;
+		}
+	}
+}
+.project-info {
+	&__main-headling {
+		padding: 0px 0px 95px 0px;
+		color: #4A4A4A;
+		font-size: 4rem;
+		line-height: 50px;
+	}
+	&__box {
+		@include flexbox();
+		flex-direction: column;
+	}
+	&__column {
+		@include flexbox();
+		justify-content: space-between;
+	}
+	&__sec-headling {
+		font-size: 1.8rem;
+		color: #959595;
+		line-height: 27px;
+		flex: 2;
+		@media (max-width:$md3+px){
+			flex: 1 0 50%;
+		}
+	}
+	&__text-box {
+		@include flexbox();
+		justify-content: flex-start;
+		flex: 4;
+		padding: 0px 0px 0px 20px;
+		@media (max-width:$md2+px){
+			flex: 3;
+		}
+		@media (max-width:$md3+px){
+			justify-content: flex-start;
+			flex: 5;
+			padding: 0px 0px 0px 0px;
+		}
+	}
+	&__text {
+		font-size: 1.8rem;
+		color: #4A4A4A;
+		line-height: 27px;
+		text-align: left;
+	}
+}
+//</PROJECT-PAGE GENERAL>====================================================================================================
+
+
+
 //</ОСНОВНОЙ БЛОК>====================================================================================================
 
