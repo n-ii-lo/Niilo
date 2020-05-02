@@ -196,7 +196,7 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 	}
 }
 .bg__material{
-	background: url(../img/material__bg.png);
+	background: url(../../img/main-page/material__bg.png);
 	background-repeat: repeat;
 	position: relative;
 	width: 100vw;
@@ -698,9 +698,8 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 	}
 }
 .cafe-visual {
-	&__block {}
 	&__img-box {
-		padding: 0px 0px 200px 0px;
+		padding: 0px 0px 180px 0px;
 		&:last-child{
 			padding: 0px 0px 250px 0px;
 		}
@@ -713,7 +712,7 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 	&__info-box{
 		@include flexbox();
 		justify-content: space-between;
-		padding: 0px 0px 200px 0px;
+		padding: 0px 0px 180px 0px;
 		@media (max-width:$md3+px){
 			flex-direction: column;
 		}
@@ -770,6 +769,32 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 	padding: 200px 0px 0px 0px;
 	&__img-box--big {
 		padding: 0px 0px 50px 0px;
+		img{
+			display: block;
+			max-width: 100%;
+			height: auto;
+		}
+	}
+	&__main-title {
+		font-size: 2.5rem;
+		line-height: 36px;
+		color: #595959;
+		padding: 0px 0px 180px 0px;
+		&:first-child{
+			padding: 180px 0px 180px 0px;
+		}
+		@media (max-width:$md3+px){
+			text-align: center;
+		}
+	}
+	&__visual-block{
+		padding: 0px 0px 250px 0px;
+	}
+	&__img-box {
+		padding: 0px 0px 180px 0px;
+		&:last-child{
+			padding: 0;
+		}
 		img{
 			display: block;
 			max-width: 100%;
