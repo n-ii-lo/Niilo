@@ -1,7 +1,7 @@
 $(document).ready(function () {
 	$('#header-slider').slick({
 		autoplay: true,
-		autoplaySpeed: 4000,
+		autoplaySpeed: 3000,
 		arrows: false,
 		slidesToShow: 1,
 		slidesToScroll: 1,
@@ -39,8 +39,13 @@ function parallax() {
 		})();
 	}
 
-	btnScrollDown.addEventListener('click', scrollDown);
+	if (!!btnScrollDown) {
+		btnScrollDown.addEventListener('click', scrollDown);
+	};
+	
 })();
+
+
 //======================================================================================
 $('.menu-burger').on('click', function () {
 	$('#mobile-menu').fadeIn('fast');
