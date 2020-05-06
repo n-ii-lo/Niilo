@@ -23,7 +23,7 @@
 			<div class="contacts-text">
 				<h1 class="contacts-text__title">Контакты</h1>
 				<div class="footer-body__img">
-					<a href="index.html"><img src="img/main-logo.svg" alt=""></a>
+					<a href="index.html"><img src="img/main-page/main-logo.svg" alt=""></a>
 				</div>
 				<div class="footer-body__column footer-flex">
 					<div title="Our location" class="footer-body__contacts">
@@ -54,30 +54,30 @@
 
 				<form action="" class="contacts-form">
 					<div class="contacts-form__item">
-						<h6 class="contacts-form__title">Имя *</h6>
+						<label id="name" name="name" type="text" autocorrect="off" autocomplete="name" class="contacts-form__title">Имя *</label>
 						<input type="text" class="contacts-form__input">
 					</div>
 
 					<div class="contacts-form__item">
-						<h6 class="contacts-form__title">Имейл *</h6>
-						<input type="email" class="contacts-form__input">
+						<label for="email" class="contacts-form__title">Имейл *</label>
+						<input id="email" name="email" type="email" autocapitalize="off" autocorrect="off" autocomplete="email" class="contacts-form__input">
 					</div>
 
 					<div class="contacts-form__item">
-						<h6 class="contacts-form__title">Номер телефона *</h6>
-						<input type="text" class="contacts-form__input">
+						<label for="tel" class="contacts-form__title">Номер телефона *</label>
+						<input id="tel" name="tel" type="tel" autocorrect="off" autocomplete="tel" maxlength="20" class="contacts-form__input">
 					</div>
 
 					<div class="contacts-form__item">
-						<h6 class="contacts-form__title">Выберите категорию *</h6>
+						<label for="select" class="contacts-form__title">Выберите категорию *</label>
 						<div class="contacts-form__button-box">
-							<button class="contacts-form__button">Архитектурное проектирование</button>
-							<button class="contacts-form__button">Дизайн интерьера</button>
+							<button type="button" class="contacts-form__button active-btn">Архитектурное проектирование</button>
+							<button type="button" class="contacts-form__button">Дизайн интерьера</button>
 						</div>
 					</div>
 
 					<div class="contacts-form__item">
-						<h6 class="contacts-form__title">Выберите тип объекта *</h6>
+						<label for="select" class="contacts-form__title">Выберите тип объекта *</label>
 
 						<div class="select-box">
 							<div class="select-box__options-container">
@@ -92,7 +92,7 @@
 
 								<div class="select-box__option">
 									<input type="radio" class="select-box__radio" id="Apartament" name="category">
-									<label for="Apartaments">
+									<label for="Apartament">
 										<p>Квартира</p>
 									</label>
 								</div>
@@ -122,12 +122,12 @@
 					</div>
 
 					<div class="contacts-form__item">
-						<h6 class="contacts-form__title">Квадратура м²</h6>
-						<input type="text" class="contacts-form__input--area">
+						<label class="contacts-form__title">Квадратура м²</label>
+						<input type="text" maxlength="10" class="contacts-form__input--area">
 					</div>
 
 					<div class="contacts-form__item">
-						<h6 class="contacts-form__title">Комментарии</h6>
+						<label class="contacts-form__title">Комментарии</label>
 						<textarea name="" id="" cols="30" rows="4" class="contacts-form__textarea"></textarea>
 					</div>
 

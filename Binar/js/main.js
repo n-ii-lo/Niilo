@@ -7,28 +7,45 @@ $('.menu-burger--gray').on('click', function () {
 	$('#mobile-menu').fadeIn('fast');
 });
 
+$('.mobile-menu__link').on('click', function () {
+	$('#mobile-menu').fadeOut('fast');
+});
+
 $('.cross').on('click', function () {
 	$('#mobile-menu').fadeOut('fast');
 });
 
 const selected = document.querySelector(".select-box__selected");
 const optionsContainer = document.querySelector(".select-box__options-container");
-
 const optionsList = document.querySelectorAll(".select-box__option");
 
-selected.addEventListener("click", () => {
-	optionsContainer.classList.toggle("active");
-});
-
-optionsList.forEach(o => {
-	o.addEventListener("click", () => {
-		selected.innerHTML = o.querySelector("label").innerHTML;
-		optionsContainer.classList.remove("active");
+if (!!selected) {
+	selected.addEventListener("click", () => {
+		optionsContainer.classList.toggle("active");
 	});
+};
+
+if (!!selected && !!optionsContainer) {
+	optionsList.forEach(o => {
+		o.addEventListener("click", () => {
+			selected.innerHTML = o.querySelector("label").innerHTML;
+			optionsContainer.classList.remove("active");
+		});
+	});
+};
+
+$('.contacts-form__button').click(function () {
+	$('.contacts-form__button').removeClass('active-btn');
+	$(this).addClass('active-btn');
 });
 
 
 
+
+
+// $('.select-box__option').on('click', function () {
+// 	$('.select-box__options-container').removeClass('actcontacts-form__buttone');
+// });
 
 
 // $(document).ready(function () {
