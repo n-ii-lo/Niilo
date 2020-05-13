@@ -115,10 +115,10 @@
 				<p class="form-text">Отправьте нам свои вопросы, комментарии или рекомендации, заполнив обязательные поля ниже.
 					Мы ответим Вам как можно скорее.</p>
 
-				<form action="" class="contacts-form">
+				<form action="handler.php" class="contacts-form">
 					<div class="contacts-form__item">
-						<label id="name" name="name" type="text" autocorrect="off" autocomplete="name" class="contacts-form__title">Имя *</label>
-						<input type="text" class="contacts-form__input">
+						<label for="name" type="text" autocorrect="off" autocomplete="name" class="contacts-form__title">Имя *</label>
+						<input id="name" name="name" type="text" class="contacts-form__input">
 					</div>
 
 					<div class="contacts-form__item">
@@ -140,35 +140,35 @@
 					</div>
 
 					<div class="contacts-form__item">
-						<label for="select" class="contacts-form__title">Выберите тип объекта *</label>
+						<label id="objTypeTitle" for="select" class="contacts-form__title">Выберите тип объекта *</label>
 
 						<div class="select-box">
 							<div class="select-box__options-container">
 
 								<div class="select-box__option">
-									<input type="radio" class="select-box__radio" id="Horeca" name="category">
+									<input class="select-box__radio">
 									<label for="Horeca" class="label-flex">
 										<p>HoReCa</p>
-										<p class="select-box__label-text">(отели, рестораны, кафе)</p>
+										<!-- <p class="select-box__label-text">(отели, рестораны, кафе)</p> -->
 									</label>
 								</div>
 
 								<div class="select-box__option">
-									<input type="radio" class="select-box__radio" id="Apartament" name="category">
+									<input class="select-box__radio">
 									<label for="Apartament">
 										<p>Квартира</p>
 									</label>
 								</div>
 
 								<div class="select-box__option">
-									<input type="radio" class="select-box__radio" id="House" name="category">
+									<input class="select-box__radio">
 									<label for="House">
 										<p>Дом</p>
 									</label>
 								</div>
 
 								<div class="select-box__option">
-									<input type="radio" class="select-box__radio" id="Another" name="category">
+									<input class="select-box__radio">
 									<label for="Another">
 										<p>Другое</p>
 									</label>
@@ -186,12 +186,12 @@
 
 					<div class="contacts-form__item">
 						<label class="contacts-form__title">Квадратура м²</label>
-						<input type="text" maxlength="10" class="contacts-form__input--area">
+						<input name="squareArea" type="text" maxlength="10" class="contacts-form__input--area">
 					</div>
 
 					<div class="contacts-form__item">
 						<label class="contacts-form__title">Комментарии</label>
-						<textarea name="" id="" cols="30" rows="4" class="contacts-form__textarea"></textarea>
+						<textarea name="comment" cols="30" rows="4" class="contacts-form__textarea"></textarea>
 					</div>
 
 					<div class="contacts-form__item">
