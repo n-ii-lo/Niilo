@@ -567,6 +567,7 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  cursor: pointer;
 }
 .arrow__img img {
   max-width: 100%;
@@ -810,22 +811,16 @@ h1, h2, h3, h4, h5, h6 {
 .footer-body__img {
   width: 70px;
   height: 25px;
-  fill: #959595;
   margin: 0px 0px 10px 0px;
   -webkit-transition: 0.5s ease-in-out;
   -o-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
-  opacity: 1;
 }
 .footer-body__img:hover {
   opacity: 0.5;
   -webkit-transition: 0.3s ease-in-out;
   -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
-}
-.footer-body__img svg {
-  max-width: 100%;
-  height: auto;
 }
 .footer-body__text-link {
   font-size: 2.5rem;
@@ -1470,7 +1465,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 2.5rem;
   line-height: 36px;
   padding: 10px 20px;
-  cursor: pointer;
+  cursor: text;
 }
 .contacts-form__input--area {
   height: 70px;

@@ -335,6 +335,7 @@
 		@include flexbox();
 		align-items: center;
 		justify-content: center;
+		cursor: pointer;
 		img{
 			max-width: 100%;
 			height: auto;
