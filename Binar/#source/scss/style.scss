@@ -13,25 +13,25 @@
 //<ШРИФТЫ>===============================================================================================
 
 //<Подключаем шрифты>=======================================================================================
-@font-face {
-	font-family: "GT Walsheim Pro";
-	src: local("GT Walsheim Pro Regular"),local("GTWalsheimProRegular"),url(../../fonts/GTWalsheimProRegular.woff2) format("woff2"),url(../../fonts/GTWalsheimProRegular.woff) format("woff"),url(../../fonts/GTWalsheimProRegular.ttf) format("truetype");
-	font-weight: 400;
-	font-style: normal;
- }
- 
-//  @font-face {
+// @font-face {
 // 	font-family: "GT Walsheim Pro";
-// 	src: local("GT Walsheim Pro Bold"),local("GTWalsheimProBold"),url(../../fonts/GTWalsheimProBold.woff2) format("woff2"),url(../../fonts/GTWalsheimProBold.woff) format("woff"),url(../../fonts/GTWalsheimProBold.ttf) format("truetype");
+// 	src: local("GT Walsheim Pro Regular"),local("GTWalsheimProRegular"),url(../fonts/GTWalsheimProRegular.woff2) format("woff2"),url(../../fonts/GTWalsheimProRegular.woff) format("woff"),url(../../fonts/GTWalsheimProRegular.ttf) format("truetype");
+// 	font-weight: 400;
+// 	font-style: normal;
+// }
+ 
+// @font-face {
+// 	font-family: "GT Walsheim Pro";
+// 	src: local("GT Walsheim Pro Bold"),local("GTWalsheimProBold"),url(../fonts/GTWalsheimProBold.woff2) format("woff2"),url(../../fonts/GTWalsheimProBold.woff) format("woff"),url(../../fonts/GTWalsheimProBold.ttf) format("truetype");
 // 	font-weight: 700;
 // 	font-style: normal
-//  }
+// }
 
- @font-face {
+@font-face {
 	font-family: "GT Walsheim Pro";
-	src: local ("GT Walsheim Pro Light"),local("GTWalsheimProLight"),url(../../fonts/GTWalsheimProLight.OTF) format("OpenType");
+	src: local("GT Walsheim Pro Light"),local("GTWalsheimProLight"),url(../fonts/GTWalsheimProLight.OTF) format("OpenType");
 	font-weight: 300;
-	font-style: normal;
+	font-style: normal
  }
 //</Подключаем шрифты>=======================================================================================
 
@@ -126,42 +126,37 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 		font-size: 1.8rem;
 		font-weight: 300;
 		line-height: 23px;
-		@include anim(0.3s,0s);
 		position: relative;
 		display: inline-block;
 		border: none;
 		background-color: transparent;
 		padding: 0px 0px 3px 0px;
-		&:hover:before {
-			width: 100%;
-			background: #4A4A4A;
-			transition: width .5s ease;
-		}
 		&:hover:after {
-			width: 100%;
-			background: transparent;
-			transition: all 0s ease;
+			-webkit-transform-origin: 100% 50%;
+			transform-origin: 100% 50%;
+			-webkit-transform: scaleX(0);
+			transform: scaleX(0);
 		}
 		&:after{
-			content: '';
-			display: block;
 			position: absolute;
-			right: 0;
-			bottom: 0;
-			height: 1px;
-			width: 0;
-			background: #4A4A4A;
-			transition: width .5s ease;
-		}
-		&:before{
-			content: '';
-			display: block;
-			position: absolute;
+			content: "";
+			bottom: 1px;
 			left: 0;
-			bottom: 0;
+			width: 100%;
 			height: 1px;
-			width: 0;
-			transition: width 0s ease, background .5s ease;
+			background-color: #4A4A4A;
+			-webkit-transform-origin: 0 50%;
+			transform-origin: 0 50%;
+			-webkit-transform: scaleX(1);
+			transform: scaleX(1);
+			-webkit-transition: -webkit-transform .3s /*cubic-bezier(.645,.045,.355,1)*/ ease-in-out;
+			transition: -webkit-transform .3s /*cubic-bezier(.645,.045,.355,1)*/ ease-in-out;
+			-o-transition: .3s transform /*cubic-bezier(.645,.045,.355,1)*/ ease-in-out;
+			transition: transform .3s /*cubic-bezier(.645,.045,.355,1)*/ ease-in-out;
+			transition: transform .3s /*cubic-bezier(.645,.045,.355,1)*/ ease-in-out,-webkit-transform .3s /*cubic-bezier(.645,.045,.355,1)*/ ease-in-out;
+			-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+			will-change: transform;
 		}
 	}
 }
@@ -170,10 +165,9 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 		@include flexbox();
 		justify-content: center;
 		align-items: center;
+		// position: relative;
+		// z-index: 110;
 		padding: 200px 0px 200px 0px;
-		// &:last-child{
-		// 	padding: 0px 0px 0px 0px;
-		// }
 		@media (max-width:$md3+px){
 			padding: 150 0px 150 0px;
 			flex-direction: column;
@@ -184,11 +178,8 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 		max-width: 100%;
 		display: block;
 		height: auto;
-		@media (max-width:$md2+px){
-			max-width: 100%;
-			img{
-				width: 100%;
-			}
+		img{
+			width: 100%;
 		}
 	}
 	&__text-box {
@@ -205,10 +196,28 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 		}
 	}
 }
+// .noise{
+// 	z-index: 100;
+// 	position: absolute;
+// 	top: 0;
+// 	left: 0;
+
+// 	width: 100%;
+// 	height: 100%;
+
+// 	pointer-events: none;
+// 	opacity: .05;
+// }
+// .canvas{
+// 	&__bg-wrap{
+// 		position: relative;
+// 		background-color:rgba(141, 141, 141, 0.5);
+// 	}
+// }
 .bg__material{
-	background: url(../../img/main-page/material__bg.png);
+	background: url(../img/main-page/material__bg.png);
 	background-repeat: repeat;
-	position: relative;
+	// position: relative;
 	width: 100vw;
 }
 .center-main {
@@ -267,11 +276,8 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 		max-width: 100%;
 		display: block;
 		height: auto;
-		@media (max-width:$md2+px){
-			max-width: 100%;
-			img{
-				width: 100%;
-			}
+		img{
+			width: 100%;
 		}
 		@media (max-width:$md3+px){
 			order: 1;
@@ -295,14 +301,14 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 		font-size: 2.5rem;
 		line-height: 36px;
 		padding: 30px 0px 0px 0px;
+		@media (max-width:$md3+px){
+			font-size: 2.1rem;
+		}
 	}
 	&__text {
 		font-size: 4rem;
 		color: #4A4A4A;
 		line-height: 50px;
-		@media (max-width:$md3+px){
-			text-align: center;
-		}
 	}
 	&__gallery-box {
 		@include flexbox();
@@ -359,36 +365,32 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 	padding: 0px 0px 3px 0px;
 	border: none;
 	background-color: transparent;
-	&:hover:before {
-		width: 100%;
-		background: #4A4A4A;
-		transition: width .5s ease;
-	}
 	&:hover:after {
-		width: 100%;
-		background: transparent;
-		transition: all 0s ease;
+		-webkit-transform-origin: 100% 50%;
+		transform-origin: 100% 50%;
+		-webkit-transform: scaleX(0);
+		transform: scaleX(0);
 	}
 	&:after{
-		content: '';
-		display: block;
 		position: absolute;
-		right: 0;
-		bottom: 0;
-		height: 1px;
-		width: 0;
-		background: #4A4A4A;
-		transition: width .5s ease;
-	}
-	&:before{
-		content: '';
-		display: block;
-		position: absolute;
+		content: "";
+		bottom: -2px;
 		left: 0;
-		bottom: 0;
+		width: 100%;
 		height: 1px;
-		width: 0;
-		transition: width 0s ease, background .5s ease;
+		background-color: #4A4A4A;
+		-webkit-transform-origin: 0 50%;
+		transform-origin: 0 50%;
+		-webkit-transform: scaleX(1);
+		transform: scaleX(1);
+		-webkit-transition: -webkit-transform .3s /*cubic-bezier(.645,.045,.355,1)*/ ease-in-out;
+		transition: -webkit-transform .3s /*cubic-bezier(.645,.045,.355,1)*/ ease-in-out;
+		-o-transition: .3s transform /*cubic-bezier(.645,.045,.355,1)*/ ease-in-out;
+		transition: transform .3s /*cubic-bezier(.645,.045,.355,1)*/ ease-in-out;
+		transition: transform .3s /*cubic-bezier(.645,.045,.355,1)*/ ease-in-out,-webkit-transform .3s /*cubic-bezier(.645,.045,.355,1)*/ ease-in-out;
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+		will-change: transform;
 	}
 }
 .disabled-btn{
@@ -418,9 +420,6 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 		color: #4A4A4A;
 		line-height: 50px;
 	}
-	@media (max-width:$md3+px){
-		justify-content: center;
-	}
 }
 .project-main {
 	&__wrapper{
@@ -430,6 +429,7 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 	}
 	&__block {
 		padding: 0px 0px 140px 0px;
+		width: 40%;
 		@media (max-width:$md2+px){
 			width: 45%;
 		}
@@ -439,6 +439,8 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 	}
 	&__img-box {
 		max-width: 100%;
+		display: block;
+		height: auto;
 		img{
 			width: 100%;
 		}
@@ -505,6 +507,9 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 		font-size: 2.5rem;
 		color: #4A4A4A;
 		line-height: 36px;
+		@media (max-width:$md3+px){
+			font-size: 2.1rem;
+		}
 	}
 	&__gallery-box {
 		@include flexbox();
@@ -541,15 +546,13 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 	color: #4A4A4A;
 	font-size: 2.5rem;
 	padding: 80px 0px 30px 0px;
+	line-height: 36px;
 }
 .contacts-form {
 	&__item {
-		padding: 0px 0px 20px 0px;
+		padding: 0px 0px 35px 0px;
 		@include flexbox();
 		flex-flow: column;
-		&:last-child{
-			padding: 0;
-		}
 	}
 	&__title {
 		padding: 0px 0px 7px 0px;
@@ -561,18 +564,21 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 		height: 70px;
 		width: 100%;
 		border: 1px solid #4A4A4A;
-		font-size: 4rem;
 		color: #4A4A4A;
-		padding: 5px;
 		background-color: transparent;
+		font-size: 2.5rem;
+    line-height: 36px;
+    padding: 10px 20px;
+    cursor: text;
 	}
 	&__input--area{
 		height: 70px;
 		width: 25%;
 		border: 1px solid #4A4A4A;
-		font-size: 4rem;
+		font-size: 2.5rem;
+		line-height: 36px;
 		color: #4A4A4A;
-		padding: 5px;
+		padding: 10px 20px;
 		background-color: transparent;
 	}
 	&__button {
@@ -608,7 +614,8 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 		border: 1px solid #4A4A4A;
 		font-size: 2.5rem;
 		color: #4A4A4A;
-		padding: 5px;
+		line-height: 36px;
+		padding: 10px 20px;
 		background-color: transparent;
 		width: 100%;
 		// overflow: hidden;
@@ -807,6 +814,7 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 	padding: 200px 0px 0px 0px;
 	&__img-box--big {
 		padding: 0px 0px 50px 0px;
+		max-width: 100%;
 		img{
 			display: block;
 			max-width: 100%;
@@ -821,15 +829,13 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 		&:first-child{
 			padding: 180px 0px 180px 0px;
 		}
-		@media (max-width:$md3+px){
-			text-align: center;
-		}
 	}
 	&__visual-block{
 		padding: 0px 0px 250px 0px;
 	}
 	&__img-box {
 		padding: 0px 0px 180px 0px;
+		max-width: 100%;
 		&:last-child{
 			padding: 0;
 		}
@@ -837,6 +843,12 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 			display: block;
 			max-width: 100%;
 			height: auto;
+		}
+	}
+	&__img-box--vertical{
+		max-width: 60%;
+		@media (max-width:$md2+px){
+			max-width: 100%;
 		}
 	}
 }
@@ -854,6 +866,13 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 	&__column {
 		@include flexbox();
 		justify-content: space-between;
+		@media (max-width:$md3+px){
+			flex-flow: column;
+			padding: 0px 0px 20px 0px;
+			&:last-child{
+				padding: 0;
+			}
+		}
 	}
 	&__sec-headling {
 		font-size: 1.8rem;
@@ -862,13 +881,13 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 		flex: 2;
 		@media (max-width:$md3+px){
 			flex: 1 0 50%;
+			// padding: 0px 0px 8px 0px;
 		}
 	}
 	&__text-box {
 		@include flexbox();
 		justify-content: flex-start;
 		flex: 4;
-		padding: 0px 0px 0px 20px;
 		@media (max-width:$md2+px){
 			flex: 3;
 		}

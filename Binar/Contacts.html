@@ -21,17 +21,18 @@
 	<div class="header-body">
 
 		<div class="pages-header__logo-box">
-			<a href="index.html"><img src="img/main-page/binar-logo_symbol.svg" alt="" class="pages-header__img"></a>
+			<a href="index.html"><img src="img/main-page/binar-logo_symbol.svg" alt="Logo" class="svg pages-header__img"
+					title="Binar"></a>
 		</div>
 
-		<div class="menu-burger--gray"></div>
+		<div class="menu-burger--gray" aria-label="Open mobile menu"></div>
 
 		<nav class="pages-header__menu-box">
 			<ul class="menu-header__list">
-				<li><a href="Projects.html" class="pages-header__link">Проекты</a></li>
-				<li><a href="Products.html" class="pages-header__link">Продукты</a></li>
-				<li><a href="About-us.html" class="pages-header__link">О нас</a></li>
-				<li><a href="Contacts.html" class="pages-header__link">Контакты</a></li>
+				<li><a href="Projects.html" class="pages-header__link" title="Projects">Проекты</a></li>
+				<li><a href="Products.html" class="pages-header__link" title="Products">Продукты</a></li>
+				<li><a href="About-us.html" class="pages-header__link" title="About us">О нас</a></li>
+				<li><a href="Contacts.html" class="pages-header__link" title="Contacts">Контакты</a></li>
 			</ul>
 		</nav>
 
@@ -39,24 +40,24 @@
 
 			<div class="mobile-menu__box">
 				<div class="mobile-menu__logo-box">
-					<a href="index.html"><img class="mobile-menu__logo" src="img/main-page/binar-logo_symbol.svg"
+					<a href="index.html"><img class="svg mobile-menu__logo" src="img/main-page/binar-logo_symbol.svg"
 							alt="Binar logo"></a>
 				</div>
 			</div>
 			<div class="mobile-menu__footer-body--space-between">
 				<ul class="mobile-menu__list">
-					<li><a href="Projects.html" class="mobile-menu__link">Проекты</a></li>
-					<li><a href="Products.html" class="mobile-menu__link">Продукты</a></li>
-					<li><a href="About-us.html" class="mobile-menu__link">О нас</a></li>
-					<li><a href="Contacts.html" class="mobile-menu__link">Контакты</a></li>
+					<li><a href="Projects.html" class="mobile-menu__link" title="Projects">Проекты</a></li>
+					<li><a href="Products.html" class="mobile-menu__link" title="Products">Продукты</a></li>
+					<li><a href="About-us.html" class="mobile-menu__link" title="About us">О нас</a></li>
+					<li><a href="Contacts.html" class="mobile-menu__link" title="Contacts">Контакты</a></li>
 				</ul>
 
-				<div class="cross"></div>
+				<div class="cross" aria-label="Close mobile menu"></div>
 
 				<div class="mobile-menu__footer-body">
-					<!-- <div class="footer-body__img">
-					<a href="index.html"><img src="img/main-page/main-logo.svg" alt=""></a>
-				</div> -->
+					<div class="footer-body__img">
+						<a href="index.html"><img class="svg" src="img/main-page/main-logo.svg" alt="Logo"></a>
+					</div>
 					<div class="footer-body__column footer-flex">
 						<div title="Our location" class="footer-body__contacts">
 							<p class="footer-body__text">Одесса, Украина</p>
@@ -69,7 +70,7 @@
 							<p class="footer-body__text-link"><a href="https://www.behance.net/binarstudio" target="_blank"
 									class="footer__link">Беханс</a></p>
 						</div>
-						<div title="our contacts" class="footer-body__contacts">
+						<div title="Our contacts" class="footer-body__contacts">
 							<p class="footer-body__text">binar.in.touch@gmail.com</p>
 							<p class="footer-body__text">+38 099 401 85 27</p>
 							<p class="footer-body__text">+38 093 830 19 47</p>
@@ -83,10 +84,10 @@
 	</div>
 </header>		<div class="container">
 
-			<div class="contacts-text">
+			<div class="contacts-text" aria-label="Contacts">
 				<h1 class="contacts-text__title">Контакты</h1>
 				<div class="footer-body__img">
-					<a href="index.html"><img src="img/main-page/main-logo.svg" alt=""></a>
+					<a href="index.html"><img src="img/main-page/main-logo.svg" alt="Logo"></a>
 				</div>
 				<div class="footer-body__column footer-flex">
 					<div title="Our location" class="footer-body__contacts">
@@ -109,30 +110,35 @@
 			</div>
 		</div>
 
-		<div class="bg__material parallax--bg">
+		<div class="bg__material parallax--bg" title="Contact form">
 			<div class="container">
 
 				<p class="form-text">Отправьте нам свои вопросы, комментарии или рекомендации, заполнив обязательные поля ниже.
 					Мы ответим Вам как можно скорее.</p>
 
-				<form action="" class="contacts-form">
+				<form action="handler.php" class="contacts-form">
 					<div class="contacts-form__item">
-						<label id="name" name="name" type="text" autocorrect="off" autocomplete="name" class="contacts-form__title">Имя *</label>
-						<input type="text" class="contacts-form__input">
+						<label aria-label="Name" for="name" type="text" autocorrect="off" autocomplete="name"
+							class="contacts-form__title">Имя
+							*</label>
+						<input id="name" name="name" type="text" class="contacts-form__input">
 					</div>
 
 					<div class="contacts-form__item">
-						<label for="email" class="contacts-form__title">Имейл *</label>
-						<input id="email" name="email" type="email" autocapitalize="off" autocorrect="off" autocomplete="email" class="contacts-form__input">
+						<label aria-label="Email" for="email" class="contacts-form__title">Имейл *</label>
+						<input id="email" name="email" type="email" autocapitalize="off" autocorrect="off" autocomplete="email"
+							class="contacts-form__input">
 					</div>
 
 					<div class="contacts-form__item">
-						<label for="tel" class="contacts-form__title">Номер телефона *</label>
-						<input id="tel" name="tel" type="tel" autocorrect="off" autocomplete="tel" maxlength="20" class="contacts-form__input">
+						<label aria-label="Phone" for="tel" class="contacts-form__title">Номер телефона *</label>
+						<input id="tel" name="tel" type="tel" autocorrect="off" autocomplete="tel" maxlength="20"
+							class="contacts-form__input">
 					</div>
 
 					<div class="contacts-form__item">
-						<label for="select" class="contacts-form__title">Выберите категорию *</label>
+						<label aria-label="Category of building" for="select" class="contacts-form__title">Выберите категорию
+							*</label>
 						<div class="contacts-form__button-box">
 							<button type="button" class="contacts-form__button active-btn">Архитектурное проектирование</button>
 							<button type="button" class="contacts-form__button">Дизайн интерьера</button>
@@ -140,36 +146,37 @@
 					</div>
 
 					<div class="contacts-form__item">
-						<label for="select" class="contacts-form__title">Выберите тип объекта *</label>
+						<label aria-label="Type of building" id="objTypeTitle" for="select" class="contacts-form__title">Выберите
+							тип объекта *</label>
 
 						<div class="select-box">
 							<div class="select-box__options-container">
 
 								<div class="select-box__option">
-									<input type="radio" class="select-box__radio" id="Horeca" name="category">
-									<label for="Horeca" class="label-flex">
+									<input class="select-box__radio">
+									<label aria-label="Horeca" for="Horeca" class="label-flex">
 										<p>HoReCa</p>
-										<p class="select-box__label-text">(отели, рестораны, кафе)</p>
+										<!-- <p class="select-box__label-text">(отели, рестораны, кафе)</p> -->
 									</label>
 								</div>
 
 								<div class="select-box__option">
-									<input type="radio" class="select-box__radio" id="Apartament" name="category">
-									<label for="Apartament">
+									<input class="select-box__radio">
+									<label aria-label="Apartament" for="Apartament">
 										<p>Квартира</p>
 									</label>
 								</div>
 
 								<div class="select-box__option">
-									<input type="radio" class="select-box__radio" id="House" name="category">
-									<label for="House">
+									<input class="select-box__radio">
+									<label aria-label="House" for="House">
 										<p>Дом</p>
 									</label>
 								</div>
 
 								<div class="select-box__option">
-									<input type="radio" class="select-box__radio" id="Another" name="category">
-									<label for="Another">
+									<input class="select-box__radio">
+									<label aria-label="Another" for="Another">
 										<p>Другое</p>
 									</label>
 								</div>
@@ -185,18 +192,18 @@
 					</div>
 
 					<div class="contacts-form__item">
-						<label class="contacts-form__title">Квадратура м²</label>
-						<input type="text" maxlength="10" class="contacts-form__input--area">
+						<label aria-label="Square meters of building" class="contacts-form__title">Квадратура м²</label>
+						<input name="squareArea" type="text" maxlength="10" class="contacts-form__input--area">
 					</div>
 
 					<div class="contacts-form__item">
-						<label class="contacts-form__title">Комментарии</label>
-						<textarea name="" id="" cols="30" rows="4" class="contacts-form__textarea"></textarea>
+						<label aria-label="Leave comment" class="contacts-form__title">Комментарии</label>
+						<textarea name="comment" cols="30" rows="4" class="contacts-form__textarea"></textarea>
 					</div>
 
 					<div class="contacts-form__item">
 						<div class="contacts-form__button-box--big">
-							<button class="button-box__button">Отправить</button>
+							<button aria-label="Send" class="button-box__button">Отправить</button>
 						</div>
 					</div>
 

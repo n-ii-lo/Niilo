@@ -22,33 +22,34 @@
 	<div id="header-slider" class="main-page__slider">
 		<div>
 			<!--<img src="img/bg__header-slider__img1.png" alt="" class="slider__item">-->
-			<div class="slider__item" style="background-image: url('img/main-page/bg__header-slider__img1@1x.png')"></div>
+			<div class="slider__item" style="background-image: url('img/main-page/slider1@2x.png')"></div>
 		</div>
 		<div>
 			<!--<img src="img/bg__header-slider__img2.png" alt="" class="slider__item">-->
-			<div class="slider__item" style="background-image: url('img/main-page/bg__header-slider__img2@1x.png')"></div>
+			<div class="slider__item" style="background-image: url('img/main-page/slider2@2x.png')"></div>
 		</div>
 		<div>
 			<!--<img src="" alt="" class="slider__item">-->
-			<div class="slider__item" style="background-image: url('img/main-page/bg__header-slider__img3@1x.png')"></div>
+			<div class="slider__item" style="background-image: url('img/main-page/slider3@2x.png')"></div>
 		</div>
 	</div>
 
 	<div class="header__body">
 		<div class="header__box">
 			<div class="header__logo-box">
-				<a href="index.html"><img class="header__logo" src="img/main-page/main-logo.svg" alt="Binar logo"></a>
+				<a href="index.html"><img class="header__logo svg" src="img/main-page/main-logo__header.svg"
+						alt="Logo"></a>
 			</div>
 
-			<div class="menu-burger"></div>
+			<div class="menu-burger" aria-label="Open mobile menu"></div>
 
 			<nav role="navigation" aria-label="Global" class="menu-header">
 
 				<ul class="menu-header__list">
-					<li><a href="Projects.html" class="menu-header__link">Проекты</a></li>
-					<li><a href="Products.html" class="menu-header__link">Продукты</a></li>
-					<li><a href="About-us.html" class="menu-header__link">О нас</a></li>
-					<li><a href="Contacts.html" class="menu-header__link">Контакты</a></li>
+					<li><a href="Projects.html" class="menu-header__link" title="Projects">Проекты</a></li>
+					<li><a href="Products.html" class="menu-header__link" title="Products">Продукты</a></li>
+					<li><a href="About-us.html" class="menu-header__link" title="About us">О нас</a></li>
+					<li><a href="Contacts.html" class="menu-header__link" title="Contacts">Контакты</a></li>
 				</ul>
 
 			</nav>
@@ -63,18 +64,18 @@
 				</div>
 				<div class="mobile-menu__footer-body--space-between">
 					<ul class="mobile-menu__list">
-						<li><a href="Projects.html" class="mobile-menu__link">Проекты</a></li>
-						<li><a href="Projects.html" class="mobile-menu__link">Продукты</a></li>
-						<li><a href="About-us.html" class="mobile-menu__link">О нас</a></li>
-						<li><a href="Contacts.html" class="mobile-menu__link">Контакты</a></li>
+						<li><a href="Projects.html" class="mobile-menu__link" title="Projects">Проекты</a></li>
+						<li><a href="Projects.html" class="mobile-menu__link" title="Products">Продукты</a></li>
+						<li><a href="About-us.html" class="mobile-menu__link" title="About us">О нас</a></li>
+						<li><a href="Contacts.html" class="mobile-menu__link" title="Contacts">Контакты</a></li>
 					</ul>
 
-					<div class="cross"></div>
+					<div class="cross" aria-label="Close mobile menu"></div>
 
 					<div class="mobile-menu__footer-body">
-						<!-- <div class="footer-body__img">
-						<a href="index.html"><img src="img/main-page/main-logo.svg" alt=""></a>
-					</div> -->
+						<div class="footer-body__img">
+							<a href="index.html"><img src="img/main-page/main-logo.svg" alt="Logo"></a>
+						</div>
 						<div class="footer-body__column footer-flex">
 							<div title="Our location" class="footer-body__contacts">
 								<p class="footer-body__text">Одесса, Украина</p>
@@ -101,100 +102,128 @@
 		</div>
 	</div>
 
-	<div class="arrow" id="scroll_down">
-		<div class="arrow__img"><img src="img/main-page/Arrow-down.png" alt=""></div>
+	<div class="arrow" id="scroll_down" aria-hidden="true">
+		<div class="arrow__img"><img src="img/main-page/Arrow-down.png" alt="Arrow-down"></div>
 	</div>
 
 	<div class="sticky-header">
 
 		<div class="sticky-header__logo-box">
-			<a href="index.html"><img src="img/main-page/binar-logo_symbol.svg" alt="" class="sticky-header__img"></a>
+			<a href="index.html"><img src="img/main-page/binar-logo_symbol.svg" alt="Logo" class="svg sticky-header__img"></a>
 		</div>
 
-		<nav class="sticky-header__menu-box">
+		<nav class="sticky-header__menu-box" aria-label="Global">
 			<ul class="menu-header__list">
-				<li><a href="Projects.html" class="sticky-header__link">Проекты</a></li>
-				<li><a href="Products.html" class="sticky-header__link">Продукты</a></li>
-				<li><a href="About-us.html" class="sticky-header__link">О нас</a></li>
-				<li><a href="Contacts.html" class="sticky-header__link">Контакты</a></li>
+				<li><a href="Projects.html" class="sticky-header__link" title="Projects">Проекты</a></li>
+				<li><a href="Products.html" class="sticky-header__link" title="Products">Продукты</a></li>
+				<li><a href="About-us.html" class="sticky-header__link" title="About us">О нас</a></li>
+				<li><a href="Contacts.html" class="sticky-header__link" title="Contacts">Контакты</a></li>
 			</ul>
 		</nav>
 
 	</div>
 
-</header>		<div class="container">
+</header>
+		<div class="container">
+
 			<main class="maintext__block">
 				<div class="content">
-					<h1 class="content__text">Привет! <br> Мы — студия архитектуры и дизайна Binar. <br> На личном опыте и
+					<h1 class="content__text">Привет! Мы — студия архитектуры и дизайна Binar. <br> На личном опыте и
 						практике мы
 						убедились, что хороший дизайн — это удобный дизайн, а эстетика — это ещё не всё.</h1>
-					<button class="view__button"><a href="About-us.html" class="main-link">Узнайте больше о нас</a></button>
+					<button class="view__button" title="About us"><a href="About-us.html" class="main-link">Узнайте больше о
+							нас</a></button>
 				</div>
 			</main>
+
 		</div>
+
 		<main title="Our projects">
+
 			<div class="bg__material parallax--bg">
 				<div class="container">
+
 					<main title="Y-apartament" class="material__block">
 						<div class="material__img-box">
-							<img src="img/main-page/Y-apartament__img.png" alt="Minimalistic loft interior for hotel">
+							<a href="Y-apartaments.html"><img src="img/3Y apartments/Content/Y_5@2x.png"
+									alt="Minimalistic loft interior for hotel"></a>
 						</div>
 						<div class="material__text-box">
 							<h5 aria-hidden="true" class="text-box__label">Интерьер</h5>
 							<h3 aria-hidden="true" class="text-box__text">Y апартаменты</h3>
 							<div class="block__button">
-								<button class="view__button"><a class="main-link" href="Y-apartaments.html">Увидеть больше</a></button>
+								<button class="view__button" aria-label="Go to page"><a class="main-link"
+										href="Y-apartaments.html">Увидеть больше</a></button>
 							</div>
 						</div>
 					</main>
+
 				</div>
 			</div>
+
 			<div class="container">
-				<main title="Café" class="simple__block">
+
+				<main title="Cometa apartament" class="simple__block">
 					<div class="simple__text-box">
 						<h5 aria-hidden="true" class="text-box__label">Интерьер</h5>
-						<h3 aria-hidden="true" class="text-box__text">Кафé</h3>
+						<h3 aria-hidden="true" class="text-box__text">Апартаменты Комета</h3>
 						<div class="block__button">
-							<button class="view__button"><a class="main-link" href="Cafe.html">Увидеть больше</a></button>
+							<button class="view__button" aria-label="Go to page"><a class="main-link" href="Cometa.html">Увидеть
+									больше</a></button>
 						</div>
 					</div>
 					<div class="simple__img-box">
-						<img src="img/main-page/Cafe__img.png" alt="Minimalistic loft cafe interior">
+						<a href="Cometa.html"><img src="img/5Cometa apartment/Content/CM_2@2x.png"
+								alt="Minimalistic loft cafe interior"></a>
 					</div>
 				</main>
+
 			</div>
+
 			<div class="bg__material parallax--bg">
 				<div class="container">
+
 					<main title="Coworking" class="material__block">
 						<div class="material__img-box">
-							<img src="img/main-page/Coworking__img.png" alt="Minimalistic loft coworking interior">
+							<a href="Coworking.html"><img src="img/4Coworking/Content/Co_2@2x.png"
+									alt="Minimalistic loft coworking interior"></a>
 						</div>
 						<div class="material__text-box">
 							<h5 aria-hidden="true" class="text-box__label">Интерьер</h5>
 							<h3 aria-hidden="true" class="text-box__text">Коворкинг</h3>
 							<div class="block__button">
-								<button class="view__button"><a class="main-link" href="Coworking.html">Увидеть больше</a></button>
+								<button class="view__button" aria-label="Go to page"><a class="main-link" href="Coworking.html">Увидеть
+										больше</a></button>
 							</div>
 						</div>
 					</main>
 
 					<div class="material__block center-main__button">
-						<button class="view__button"><a href="Projects.html" class="main-link">Увидеть все проекты</a></button>
+						<button class="view__button" aria-label="Go to page"><a href="Projects.html" class="main-link">Увидеть все
+								проекты</a></button>
 					</div>
+
 				</div>
 			</div>
+
 		</main>
+
 		<div class="container">
-			<main class="our-products__block">
+
+			<main class="our-products__block" title="Our products">
+
 				<div class="our-products__text-box">
 					<h1 class="our-products__text">Продукты</h1>
-					<p class="our-products__main-text">Мы создаем продукты… в теплых тонах. По периметру помещения проходит линия
-						декоративных полос, которые делают кафе более аутентичным.</p>
+					<p class="our-products__main-text">Мы исследуем эстетические и функциональные варианты,
+						создавая решения,
+						которые варьируются от книжных полок до столов, от диванов до шкафов, <br> от кроватей до аксессуаров.</p>
 				</div>
+
 				<div class="our-products__gallery-box">
+
 					<div class="gallery-box__item">
 						<div class="gallery-box__item-img">
-							<img src="img/Product/gallery-item_1.png" alt="White chair with wooden armchairs">
+							<img src="img/Products photo/Stenkover@2x.png" alt="White chair with wooden armchairs">
 						</div>
 						<div class="gallery-box__text-box">
 							<h5 aria-hidden="true" class="gallery-box__item-label">Продукт</h5>
@@ -205,10 +234,9 @@
 						</div>
 					</div>
 
-
 					<div class="gallery-box__item">
 						<div class="gallery-box__item-img">
-							<img src="img/Product/gallery-item_2.png" alt="White plastic chair">
+							<img src="img/Products photo/Sladda@2x.png" alt="White plastic chair">
 						</div>
 						<div class="gallery-box__text-box">
 							<h5 aria-hidden="true" class="gallery-box__item-label">Продукт</h5>
@@ -221,7 +249,7 @@
 
 					<div class="gallery-box__item">
 						<div class="gallery-box__item-img">
-							<img src="img/Product/gallery-item_3.png" alt="Beige small chair">
+							<img src="img/Products photo/Fartug@2x.png" alt="Beige small chair">
 						</div>
 						<div class="gallery-box__text-box">
 							<h5 aria-hidden="true" class="gallery-box__item-label">Продукт</h5>
@@ -234,7 +262,7 @@
 
 					<div class="gallery-box__item">
 						<div class="gallery-box__item-img">
-							<img src="img/Product/gallery-item_4.png" alt="White vase">
+							<img src="img/Products photo/Ektorp@2x.png" alt="White vase">
 						</div>
 						<div class="gallery-box__text-box">
 							<h5 aria-hidden="true" class="gallery-box__item-label">Продукт</h5>
@@ -247,7 +275,7 @@
 
 					<div class="gallery-box__item hidden-tablet">
 						<div class="gallery-box__item-img">
-							<img src="img/Product/gallery-item_5.png" alt="Olive vase">
+							<img src="img/Products photo/Odmjuk@2x.png" alt="Olive vase">
 						</div>
 						<div class="gallery-box__text-box">
 							<h5 aria-hidden="true" class="gallery-box__item-label">Продукт</h5>
@@ -260,7 +288,7 @@
 
 					<div class="gallery-box__item hidden-tablet">
 						<div class="gallery-box__item-img">
-							<img src="img/Product/gallery-item_6.png" alt="White vase">
+							<img src="img/Products photo/Kallax@2x.png" alt="White vase">
 						</div>
 						<div class="gallery-box__text-box">
 							<h5 aria-hidden="true" class="gallery-box__item-label">Продукт</h5>
@@ -270,25 +298,29 @@
 							</button>
 						</div>
 					</div>
+
 				</div>
+
 				<div class="material__block center-main__button">
 					<button class="view__button"><a href="Products.html" class="main-link">Увидеть все продукты</a></button>
 				</div>
+
 			</main>
 		</div>
-<footer title="footer">
+
+<footer>
 	<div class='container'>
 		<div class="footer-body">
 			<div class="footer-body__column">
 				<h1 class="footer-body__label">Хотите заказать проект или остались вопросы?</h1>
-				<div class="footer-body__button"><button class="view__button"><a href="Contacts.html"
+				<div class="footer-body__button"><button class="view__button" title="Contact us"><a href="Contacts.html"
 							class="main-link">Свяжитесь с нами</a></button>
 				</div>
 			</div>
 			<div class="footer-body__img">
-				<a href="index.html"><img src="img/main-page/main-logo.svg" alt=""></a>
+				<a href="index.html"><img class="svg" src="img/main-page/main-logo.svg" alt="Logo"></a>
 			</div>
-			<div class="footer-body__column footer-flex">
+			<div class="footer-body__column footer-flex" title="Our location">
 				<div title="Our location" class="footer-body__contacts">
 					<p class="footer-body__text">Одесса, Украина</p>
 				</div>
@@ -300,7 +332,7 @@
 					<p class="footer-body__text-link"><a href="https://www.behance.net/binarstudio" target="_blank"
 							class="footer__link">Беханс</a></p>
 				</div>
-				<div title="our contacts" class="footer-body__contacts">
+				<div title="Our contacts" class="footer-body__contacts">
 					<p class="footer-body__text">binar.in.touch@gmail.com</p>
 					<p class="footer-body__text">+38 099 401 85 27</p>
 					<p class="footer-body__text">+38 093 830 19 47</p>
@@ -310,11 +342,13 @@
 	</div>
 </footer>
 	</div>
+
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <!-- <script src="https://code.jquery.com/jquery-migrate-3.0.1.min.js"></script> -->
 <script src="js/slick.min.js"></script>
 <script src="js/main.js"></script>
 <script src="js/custom.js"></script>
+
 </body>
 
 </html>
