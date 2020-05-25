@@ -246,7 +246,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 767.98px) {
   .mobile-menu__link {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
   }
 }
 .mobile-menu__link:hover:before {
@@ -777,6 +777,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .footer-body__label {
   font-size: 3.4rem;
+  line-height: 40px;
   padding: 0px 0px 20px 0px;
   color: #4A4A4A;
 }
@@ -890,12 +891,12 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-transform: scaleX(1);
   -ms-transform: scaleX(1);
       transform: scaleX(1);
-  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
-  -o-transition: 0.2s transform cubic-bezier(0.645, 0.045, 0.355, 1);
-  -o-transition: transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  -o-transition: 0.3s transform ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   will-change: transform;
@@ -957,12 +958,12 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-transform: scaleX(1);
   -ms-transform: scaleX(1);
       transform: scaleX(1);
-  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
-  -o-transition: 0.2s transform cubic-bezier(0.645, 0.045, 0.355, 1);
-  -o-transition: transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  -o-transition: 0.3s transform ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   will-change: transform;
@@ -1156,6 +1157,11 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 36px;
   padding: 30px 0px 0px 0px;
 }
+@media (max-width: 767.98px) {
+  .our-products__main-text {
+    font-size: 2.1rem;
+  }
+}
 .our-products__text {
   font-size: 4rem;
   color: #4A4A4A;
@@ -1262,12 +1268,12 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-transform: scaleX(1);
   -ms-transform: scaleX(1);
       transform: scaleX(1);
-  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
-  -o-transition: 0.2s transform cubic-bezier(0.645, 0.045, 0.355, 1);
-  -o-transition: transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  -o-transition: 0.3s transform ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   will-change: transform;
@@ -1386,6 +1392,11 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 2.5rem;
   color: #4A4A4A;
   line-height: 36px;
+}
+@media (max-width: 767.98px) {
+  .about-us__main-text {
+    font-size: 2.1rem;
+  }
 }
 .about-us__gallery-box {
   display: -webkit-box;
@@ -1789,11 +1800,6 @@ h1, h2, h3, h4, h5, h6 {
 .project__main-title:first-child {
   padding: 180px 0px 180px 0px;
 }
-@media (max-width: 767.98px) {
-  .project__main-title {
-    text-align: center;
-  }
-}
 .project__visual-block {
   padding: 0px 0px 250px 0px;
 }
@@ -1842,6 +1848,18 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+@media (max-width: 767.98px) {
+  .project-info__column {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    padding: 0px 0px 20px 0px;
+  }
+  .project-info__column:last-child {
+    padding: 0;
+  }
 }
 .project-info__sec-headling {
   font-size: 1.8rem;
